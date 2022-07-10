@@ -1,47 +1,38 @@
 ---
 sidebar_position: 1
+title: Getting Started
+description: Get started with inviting the Suggestions bot and setting up its primary features.
 ---
 
-# Tutorial Intro
+To invite the bot, you must use [this link](https://discord.com/oauth2/authorize?client_id=474051954998509571&permissions=388160&scope=applications.commands+bot).
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Here you can choose the server you wish to invite the bot to and choose what permissions it should have. It's best to leave the permissions alone or you'll most likely run into issues. The bot is only assigned the permissions it needs. Those permissions are:
 
-## Getting Started
+* View Channels (`VIEW_CHANNEL`)
+* Send Messages (`SEND_MESSAGES`)
+* Manage Messages (`MANAGE_MESSAGES`)
+* Embed Links (`EMBED_LINKS`\)
+* Read Message History (`READ_MESSAGE_HISTORY`)
+* Add Reactions (`ADD_REACTIONS`)
 
-Get started by **creating a new site**.
+## Setting Up the Bot
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+Once the bot is in your server, there are a few housekeeping things you need to do. (You must have the Manage Server (`MANAGE_GUILD`) permission to complete these steps.)
 
-### What you'll need
+The bot now uses application/slash commands. This provides better integration into Discord and is a more efficient way to use the bot.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+1. Create and set a suggestions channel by running `config channel <channel>`.
 
-## Generate a new site
+   a) Add the bot to that channel's permissions and exclusively give it the `SEND MESSAGES` and `ADD REACTIONS` permissions. (Add anymore depending on what permissions you gave the bot globally.)
 
-Generate a new Docusaurus site using the **classic template**.
+   b) Disable `SEND MESSAGES` and `ADD REACTIONS` for `@everyone` to keep the channel clean and that users only vote with the configured emoji set (e.g. the ✅ and ❌ emojis).
 
-The classic template will automatically be added to your project after you run the command:
+2. Adjust the permissions of the `approve` and `reject` slash commands in your server's settings via the "Integrations" page. Choose the roles that you would like to have the permissions to approve and reject suggestions.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+3. Choose an emoji set for your server. You can view the available sets via the `config get emojis` command and choose which one you want in your server with `config emojis <#>`, where `#` indicates which emoji option.
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+*- Step 2 is only required if you'll be managing suggestions using the `approve` and `reject` slash commands.*
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+*- If you wish to use a separate channel for posting suggestion results, check out [this section](managing-suggestions.md#suggestions-logging).*
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+Once you completed those steps, you should be set to go! Click "Managing Suggestions" on the left or down below for more information on approving/rejecting user suggestions.
