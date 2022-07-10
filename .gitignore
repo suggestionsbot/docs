@@ -18,3 +18,15 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Webstorm
+.idea
+
+# Yarn
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
