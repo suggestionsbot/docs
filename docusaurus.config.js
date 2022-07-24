@@ -130,6 +130,9 @@ const config = {
         }
       ]
     }),
+  clientModules: [
+    require.resolve('./modules/discordComponents.js'),
+  ]
 };
 
 module.exports = config;
