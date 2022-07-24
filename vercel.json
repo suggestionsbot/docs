@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/docs/staff-suggestions",
+      "destination": "/coming-soon",
+      "permanent": false
+    },
+    {
+      "source": "/docs/statistics",
+      "destination": "/coming-soon",
+      "permanent": false
+    }
+  ]
+}
