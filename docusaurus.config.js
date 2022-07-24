@@ -7,7 +7,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Suggestions Documentation',
-  tagline: 'The official documentation for the Suggestions bot. The most powerful suggestions feature set you\'ll find on Discord.',
+  tagline:
+    "The official documentation for the Suggestions bot. The most powerful suggestions feature set you'll find on Discord.",
   url: 'https://docs.suggestions.gg',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -62,6 +63,11 @@ const config = {
             docId: 'intro',
             position: 'left',
             label: 'Get Started',
+          },
+          {
+            to: 'coming-soon',
+            label: 'Coming Soon',
+            position: 'left',
           },
           {
             href: 'https://suggestions.gg/',
