@@ -2368,6 +2368,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@skyra/discord-components-core@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "@skyra/discord-components-core@npm:3.4.0"
+  dependencies:
+    "@stencil/core": ^2.15.2
+    clsx: ^1.1.1
+    hex-to-rgba: ^2.0.1
+  checksum: ccc84505f54e9ac5f8ec47feb49991adf49276ee7be4264c4fb91927bdbd2dccea59a6023ecec52978ae98223f6dd8858800fcfd723f30e19c9afeb6db93bfb5
+  languageName: node
+  linkType: hard
+
+"@skyra/discord-components-react@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "@skyra/discord-components-react@npm:3.4.0"
+  dependencies:
+    "@skyra/discord-components-core": ^3.4.0
+    tslib: ^2.4.0
+  peerDependencies:
+    react: 16.8.x || 17.x || 18.x
+    react-dom: 16.8.x || 17.x || 18.x
+  checksum: 2c7f26d4aebf247239195cf61d3d8d96fe9827ab0d1f7252bf477a6d3d360f97470a0a3a2dd011ea02db2c0c455bdc1cf50adcee6cba6bb5c7ae2a2ce9d1e664
+  languageName: node
+  linkType: hard
+
 "@slorber/static-site-generator-webpack-plugin@npm:^4.0.7":
   version: 4.0.7
   resolution: "@slorber/static-site-generator-webpack-plugin@npm:4.0.7"
@@ -4663,6 +4687,7 @@ __metadata:
     "@docusaurus/module-type-aliases": 2.0.0-beta.22
     "@docusaurus/preset-classic": 2.0.0-beta.22
     "@mdx-js/react": ^1.6.22
+    "@skyra/discord-components-react": ^3.4.0
     "@tsconfig/docusaurus": ^1.0.5
     clsx: ^1.2.0
     prism-react-renderer: ^1.3.5
