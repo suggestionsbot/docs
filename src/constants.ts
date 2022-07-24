@@ -10,5 +10,5 @@ export type EmbedProps = {
   footer?: JSX.Element;
   thumbnail?: boolean;
   displayEmbedAuthor?: boolean;
-  ephemeral?: boolean
+  ephemeral?: boolean;
 };
