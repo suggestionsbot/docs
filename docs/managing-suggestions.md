@@ -1,28 +1,39 @@
 ---
 sidebar_position: 2
 title: Managing Suggestions
-description: Use the easy but powerful suggestions management to stay organized in your Discord.
+description: Use the easy but powerful suggestion management to stay organized in your Discord.
 ---
+import PendingSuggestion from '@site/src/components/Embeds/PendingSuggestion';
+import SuggestionConfirmation from '@site/src/components/Embeds/SuggestionConfirmation';
+import SuggestionStatusEmbed from '@site/src/components/Embeds/SuggestionStatusEmbed';
 
 _**Key:**_  
 `< >` = Required  
 `[ ]` = Optional
 
-**Note:** The above placeholders are _not_ required. They are simply to show you what the required fields are.
+**Note:** The above placeholders are _not_ required. They are simply to show you what the required fields are. The bot will tell you what fields are required.
 
 `|` = Means "or"  
-`administrator` = A user with the Manage Server (`MANAGE_GUILD`) permission
+`administrator` = A user with the **Manage Server** permission
 
 Managing suggestions is simple. Each suggestion is assigned a **Suggestion ID** \(sID\). From there, staff members can either approve, reject, or add a note to a suggestion with the sID. The sID is located in the footer of each suggestion:
 
-![Suggestion Example w/ sID](/img/managing-suggestions-1.png)
+<PendingSuggestion />
 
-![Suggestion DM](/img/managing-suggestions-2.png)
+You can also find the sID in the message the bot sends after you send a suggestion.
+
+<SuggestionConfirmation status="pending" />
 
 Alternatively, you can use the message ID of the suggestion message to manage a suggestion, especially if you're using the bot on mobile. Click [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to check out a tutorial on how to find a message ID.
 
+However, you won't have to worry too much about trying to remember IDs. The bot will autocomplete the suggestion ID as you type it out!
+
+## Slash Command Permissions
+
+If you haven't already done so, please refer to the [Getting Started](intro.md#setting-up-the-bot) section to set up slash command permissions. By default, only administrators can manage suggestions. However, if you want other staff members to have access to these commands, please refer to the aforementioned section.
+
 ## DM Responses
-DM responses are sent to the suggestion submitter based on various actions. DM responses may be toggled by running `config dmResponses <true/false>`. This means DMs to the suggestion sumbitter will or won't be sent via these actions based on how you configure the bot for your server:
+DM responses are sent to the suggestion submitter based on various actions. DM responses may be toggled by running `/config dm <enable/disable>`. This means DMs to the suggestion submitter will or won't be sent via these actions based on how you configure the bot for your server:
 
 - suggestion submitted
 - suggestion approved
@@ -31,73 +42,58 @@ DM responses are sent to the suggestion submitter based on various actions. DM r
 
 By default, DM responses are enabled. This can be configured by an administrator.
 
-## Setting Up Slash Command Permissions
+Users can also individually choose if they wish to receive DM responses. This can be configured by running `/dm <enable|disable>`. This will override the server-wide setting unless the server has disabled DM responses.
 
-If you haven't already done so, please refer to the [Getting Started](intro.md#setting-up-the-bot) section to set up slash command permissiosn. By default, only administrators can manage suggestions. However, if you want other staff members to have access to these commands, please refer to the aforementioned section.
 
 ## Approving Suggestions
 
-Suggestions are approved via the sID. Once you have it, run the command `approve <sID|message ID>`. Afterward, series of actions will happen:
+Suggestions are approved via either the sID or message ID. Once you have it, run the command `/approve <sID|message ID>`. Afterward, series of actions will happen:
 
 * The suggestion will update as "Approved" in the suggestions channel and its results will be logged.
 * The user will receive a DM that you approved their suggestion.
-* The results of that suggestion will either be posted to the suggestion logs channel or the suggestion message will be kept with its results displayed. (dependent on [`config keepLogs`](configuration.md#keep-logs))
-* _An optional response can be added by running_ `approve <sID|message ID> [response]`.
+* The results of that suggestion will be posted to the suggestion logs channel.
+* _An optional response can be added by running_ `/approve <sID|message ID> [response]`.
 
-![Suggestion Approved Status](/img/managing-suggestions-3.png)
+<SuggestionStatusEmbed status="approved" />
 
-![Suggestion Approved DM](/img/managing-suggestions-4.png)
+An optional response may also be left on suggestions when approving:
+
+<SuggestionStatusEmbed status="approved" response />
+
+If you enabled DM responses and the user has enabled them, they will receive a DM that their suggestion has been approved.
+
+<SuggestionConfirmation status="approved" />
 
 It seems like a lot, doesn't it? It really isn't, because it all happens in the matter of seconds!
 
 ## Rejecting Suggestions
 
-Rejecting suggestions work the same way as approving suggestions. Once you run the command `reject <sID|message ID> [response]`, the same series of actions will happen as stated above, but information of the suggestion being rejected will be posted instead.
+Rejecting suggestions work the same way as approving suggestions. Once you run the command `/reject <sID|message ID> [response]`, the same series of actions will happen as stated above, but information of the suggestion being rejected will be posted instead.
 
-If responses are set to `true` via the usage of the [`config responses`](configuration.md#rejection-responses) command, then adding a response when rejecting a suggestion is required.
+<SuggestionStatusEmbed status="rejected" />
 
-![Suggestion Rejected Status](/img/managing-suggestions-5.png)
+Just like with approving suggestions, you can add an optional response to the rejection and receive a DM from the bot (if applicable).
 
-![Suggestion Rejected DM](/img/managing-suggestions-6.png)
+<SuggestionStatusEmbed status="rejected" response />
+
+<SuggestionConfirmation status="rejected" />
 
 ## Suggestions Logging
 
-When a suggestion is approved or rejected, one of two things will happen, depending on if you have a suggestions logs channel set and if [`/config keepLogs`](configuration.md#keep-logs) is enabled (by default, it's `false`).
+When a suggestion is approved or rejected, the following information will be logged:
 
-- If you have no suggestion logs channel set or `config keepLogs` is true, then the suggestion message will be updated with its results and the reactions removed.
-- If you have a suggestion logs channel set and `config keepLogs` is false, The bot will delete the original suggestion message and its results posted to the set logs channel. You'll find the following information in the log message either way:
-
-* the results (both upvotes and downvotes)
+* the results (this is from the reaction count)
 * the suggestion
 * the submitter
 * the staff member that approved or rejected the suggestion
 * the sID
 * the response (if one was given)
 
-![Suggestion Results](/img/managing-suggestions-6.png)
+<SuggestionConfirmation status="approved" response />
 
 If you wish to set up the suggestion logs channel, you may refer to the steps below:
 
-1) Add the bot to the suggestion channel's permissions and exclusively give it the `SEND MESSAGES` permission.
-    - Add any more depending on what permissions you gave the bot globally.
-2) Disable `SEND MESSAGES` and `ADD REACTIONS` for `@everyone` to keep the channel clean.
-
-## Suggestions Emojis
-
-![The available emoji sets.](/img/managing-suggestions-7.png)
-
-To change to any of these options, you can simply run `config emojis <#>`\(e.g. `config emojis 3`\)*. The number is in front of each emoji set. Upon changing, any future suggestions will use that emoji set, as shown below:
-
-![An example of one of the emoji sets.](/img/managing-suggestions-8.png)
-
-**User must be an administrator to use this command.*
-
-## Suggestion Notes
-
-![An example of a suggestion note](/img/managing-suggestions-9.png)
-
-To add a note to a suggestion, simply retrieve the sID or message ID and run `note <sID|suggestion ID> <note>`, where `note` can be any message you wish to choose. Upon adding a note, the submitter of the suggestion will receive a DM with that information:
-
-![An example of a suggestion note in DM](/img/managing-suggestions-10.png)
-
-A new note can be added, and it'll override the current note on the suggestion. However, all previous notes are saved and will be accessible in the future (TBD).
+1. Create a new channel and give it a name such as `suggestion-results`.
+2. Add the bot to your newly created channel and give it the **Send Messages** permission.
+3. Add additional permissions depending on what the bot has assigned in your server.
+4. Disable **Send Messages** and **Add Reactions** for `@everyone` to only allow the bot to send messages and to prevent unnecessary message reactions.

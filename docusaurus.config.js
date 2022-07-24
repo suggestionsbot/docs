@@ -51,10 +51,10 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Suggestions',
+        title: 'Suggestions Documentation',
         logo: {
           alt: 'Suggestions Bot Logo',
-          src: 'img/logo.png',
+          src: 'img/logo.svg',
         },
         items: [
           {
@@ -64,7 +64,17 @@ const config = {
             label: 'Get Started',
           },
           {
-            href: 'https://github.com/suggestionsbot/suggestions-bot',
+            href: 'https://suggestions.gg/',
+            label: 'Website',
+            position: 'right',
+          },
+          {
+            href: 'https://discord.gg/suggestions',
+            label: 'Discord',
+            position: 'right',
+          },
+          {
+            href: 'https://github.com/suggestionsbot',
             label: 'Contribute',
             position: 'right',
           },
@@ -122,7 +132,7 @@ const config = {
       metadata: [
         {
           name: 'theme-color',
-          content: '#dd9323',
+          content: '#ffd663',
         },
         {
           property: 'og:image',
