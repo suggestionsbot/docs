@@ -1,12 +1,12 @@
 {
   "redirects": [
     {
-      "source": "/docs/staff-suggestions",
+      "source": "/docs/staff-suggestions.html",
       "destination": "/coming-soon",
       "permanent": false
     },
     {
-      "source": "/docs/statistics",
+      "source": "/docs/statistics.html",
       "destination": "/coming-soon",
       "permanent": false
     }
