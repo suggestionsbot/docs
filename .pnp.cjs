@@ -43,6 +43,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:5.30.7"],\
             ["@typescript-eslint/parser", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:5.30.7"],\
             ["clsx", "npm:1.2.1"],\
+            ["docusaurus-plugin-fathom", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.1.0"],\
+            ["dotenv", "npm:16.0.1"],\
             ["eslint", "npm:8.20.0"],\
             ["eslint-plugin-prettier", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:4.2.1"],\
             ["prettier", "npm:2.7.1"],\
@@ -7555,6 +7557,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/eslint-plugin", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:5.30.7"],\
             ["@typescript-eslint/parser", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:5.30.7"],\
             ["clsx", "npm:1.2.1"],\
+            ["docusaurus-plugin-fathom", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.1.0"],\
+            ["dotenv", "npm:16.0.1"],\
             ["eslint", "npm:8.20.0"],\
             ["eslint-plugin-prettier", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:4.2.1"],\
             ["prettier", "npm:2.7.1"],\
@@ -7574,6 +7578,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["doctrine", "npm:3.0.0"],\
             ["esutils", "npm:2.0.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["docusaurus-plugin-fathom", [\
+        ["npm:1.1.0", {\
+          "packageLocation": "./.yarn/cache/docusaurus-plugin-fathom-npm-1.1.0-183fbdefff-b2e9c0407b.zip/node_modules/docusaurus-plugin-fathom/",\
+          "packageDependencies": [\
+            ["docusaurus-plugin-fathom", "npm:1.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/docusaurus-plugin-fathom-virtual-963e971905/0/cache/docusaurus-plugin-fathom-npm-1.1.0-183fbdefff-b2e9c0407b.zip/node_modules/docusaurus-plugin-fathom/",\
+          "packageDependencies": [\
+            ["docusaurus-plugin-fathom", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.1.0"],\
+            ["@docusaurus/core", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
+            ["@types/docusaurus__core", null]\
+          ],\
+          "packagePeers": [\
+            "@docusaurus/core",\
+            "@types/docusaurus__core"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7676,6 +7702,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["dot-prop", "npm:5.3.0"],\
             ["is-obj", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["dotenv", [\
+        ["npm:16.0.1", {\
+          "packageLocation": "./.yarn/cache/dotenv-npm-16.0.1-d99e72bb95-f459ffce07.zip/node_modules/dotenv/",\
+          "packageDependencies": [\
+            ["dotenv", "npm:16.0.1"]\
           ],\
           "linkType": "HARD"\
         }]\

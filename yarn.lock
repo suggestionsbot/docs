@@ -5010,6 +5010,8 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.30.7
     "@typescript-eslint/parser": ^5.30.7
     clsx: ^1.2.0
+    docusaurus-plugin-fathom: ^1.1.0
+    dotenv: ^16.0.1
     eslint: ^8.20.0
     eslint-plugin-prettier: ^4.2.1
     prettier: ^2.7.1
@@ -5028,6 +5030,15 @@ __metadata:
   dependencies:
     esutils: ^2.0.2
   checksum: fd7673ca77fe26cd5cba38d816bc72d641f500f1f9b25b83e8ce28827fe2da7ad583a8da26ab6af85f834138cf8dae9f69b0cd6ab925f52ddab1754db44d99ce
+  languageName: node
+  linkType: hard
+
+"docusaurus-plugin-fathom@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "docusaurus-plugin-fathom@npm:1.1.0"
+  peerDependencies:
+    "@docusaurus/core": ^2.0.0
+  checksum: b2e9c0407b802bec7de70b6cd0fd2aabd1604c5de697d1c51e9967d323c06600e436c821b31301376bdb0f1e2e5704d3017ed009838afed9a969a28c7baa2b10
   languageName: node
   linkType: hard
 
@@ -5125,6 +5136,13 @@ __metadata:
   dependencies:
     is-obj: ^2.0.0
   checksum: d5775790093c234ef4bfd5fbe40884ff7e6c87573e5339432870616331189f7f5d86575c5b5af2dcf0f61172990f4f734d07844b1f23482fff09e3c4bead05ea
+  languageName: node
+  linkType: hard
+
+"dotenv@npm:^16.0.1":
+  version: 16.0.1
+  resolution: "dotenv@npm:16.0.1"
+  checksum: f459ffce07b977b7f15d8cc4ee69cdff77d4dd8c5dc8c85d2d485ee84655352c2415f9dd09d42b5b5985ced3be186130871b34e2f3e2569ebc72fbc2e8096792
   languageName: node
   linkType: hard
 

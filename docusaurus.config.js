@@ -1,5 +1,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
+require('dotenv').config();
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
 const darkCodeTheme = require('prism-react-renderer/themes/dracula');
@@ -144,11 +145,15 @@ const config = {
           property: 'og:image',
           content: 'img/logo.png',
         }
-      ]
+      ],
+      fathomAnalytics: {
+        siteId: process.env.FATHOM_SITE_ID,
+      }
     }),
   clientModules: [
     require.resolve('./modules/discordComponents.js'),
-  ]
+  ],
+  plugins: [require.resolve('docusaurus-plugin-fathom')]
 };
 
 module.exports = config;
