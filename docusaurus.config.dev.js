@@ -140,6 +140,18 @@ const config = {
           content: 'img/logo.png',
         },
       ],
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '15W1VT42Q2',
+
+        // Public API key: it is safe to commit it
+        apiKey: '31cb42386dcee6c62941330985512931',
+
+        indexName: 'dev_docs_en',
+
+        // Optional: see doc section below
+        contextualSearch: true,
+      },
     }),
   clientModules: [require.resolve('./modules/discordComponents.js')],
   plugins: [],
