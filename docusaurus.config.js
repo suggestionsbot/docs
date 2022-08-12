@@ -151,7 +151,7 @@ const config = {
         // Public API key: it is safe to commit it
         apiKey: '31cb42386dcee6c62941330985512931',
 
-        indexName: 'prod_docs_en',
+        indexName: 'suggestions',
 
         // Optional: see doc section below
         contextualSearch: true,
