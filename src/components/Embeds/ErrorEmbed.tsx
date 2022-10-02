@@ -17,7 +17,10 @@ export default function ErrorEmbed({
     <div className='padding-bottom--md'>
       <DiscordMessages>
         <DiscordMessage profile='suggestions' ephemeral>
-          <DiscordEmbed slot='embeds' color={EmbedColor.ERROR} title={title}>
+          <DiscordEmbed
+            slot='embeds'
+            color={EmbedColor.ERROR}
+            embedTitle={title}>
             <DiscordEmbedDescription slot='description'>
               {description}
             </DiscordEmbedDescription>
