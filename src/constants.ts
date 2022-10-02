@@ -18,6 +18,10 @@ export enum ErrorCode {
   GENERIC_FORBIDDEN = 10,
   UNHANDLED_ERROR = 11,
   GENERIC_NOT_FOUND = 12,
+  CONFIGURED_CHANNEL_NO_LONGER_EXISTS = 13,
+  MISSING_PERMISSIONS_IN_SUGGESTIONS_CHANNEL = 14,
+  MISSING_PERMISSIONS_IN_LOGS_CHANNEL = 15,
+  MISSING_TRANSLATION = 16,
 }
 
 export type EmbedProps = {
@@ -31,6 +35,6 @@ export type EmbedProps = {
 
 export type ErrorEmbedProps = {
   title: string;
-  description: string;
+  description: string | JSX.Element;
   code: ErrorCode;
 };
