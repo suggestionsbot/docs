@@ -76,7 +76,7 @@ const config = {
             position: 'right',
           },
           {
-            href: 'https://github.com/suggestionsbot',
+            href: 'https://github.com/suggestionsbot/suggestions-bot',
             label: 'Contribute',
             position: 'right',
           },
