@@ -2415,27 +2415,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@skyra/discord-components-core@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "@skyra/discord-components-core@npm:3.4.0"
+"@skyra/discord-components-core@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "@skyra/discord-components-core@npm:3.4.1"
   dependencies:
-    "@stencil/core": ^2.15.2
-    clsx: ^1.1.1
+    "@stencil/core": ^2.17.3
+    clsx: ^1.2.1
     hex-to-rgba: ^2.0.1
-  checksum: ccc84505f54e9ac5f8ec47feb49991adf49276ee7be4264c4fb91927bdbd2dccea59a6023ecec52978ae98223f6dd8858800fcfd723f30e19c9afeb6db93bfb5
+  checksum: 8d3e962e05c9e72e2f7cb480a34b930a5af195b5a874a9e52d13730f7993f841f67f9910eb75402266477ba36007c9cb0d3e0910d816edc54b8e57d6d7d5973f
   languageName: node
   linkType: hard
 
-"@skyra/discord-components-react@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "@skyra/discord-components-react@npm:3.4.0"
+"@skyra/discord-components-react@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "@skyra/discord-components-react@npm:3.4.1"
   dependencies:
-    "@skyra/discord-components-core": ^3.4.0
+    "@skyra/discord-components-core": ^3.4.1
     tslib: ^2.4.0
   peerDependencies:
     react: 16.8.x || 17.x || 18.x
     react-dom: 16.8.x || 17.x || 18.x
-  checksum: 2c7f26d4aebf247239195cf61d3d8d96fe9827ab0d1f7252bf477a6d3d360f97470a0a3a2dd011ea02db2c0c455bdc1cf50adcee6cba6bb5c7ae2a2ce9d1e664
+  checksum: 0422ad3d60cc421d9ff8484836b2ec2bfb24b73a1d55a48204b53370e9d26d93f9f99c48d968b712c766e5ec3aac6a989ce959e1c538cd30f7f66957d56010d6
   languageName: node
   linkType: hard
 
@@ -2450,12 +2450,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@stencil/core@npm:^2.15.2":
-  version: 2.17.1
-  resolution: "@stencil/core@npm:2.17.1"
+"@stencil/core@npm:^2.17.3":
+  version: 2.18.1
+  resolution: "@stencil/core@npm:2.18.1"
   bin:
     stencil: bin/stencil
-  checksum: dc660f9219952e569c7357ee0f601b6835f71bfae33997f7be7b5eb14694cc725e19166da20f6af49f467456402551e6dfffcee13205158eeb77aaf1c5911a65
+  checksum: 5be827077bcff3cda8b4f1e8d362c0c5e1d33e1f2103e6f2ff507d69a1a4731ff5e674dcfc7df495ba54d57a5e4e493fff43922f7ff2a6595a1974867e9c8214
   languageName: node
   linkType: hard
 
@@ -4239,7 +4239,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.1.1, clsx@npm:^1.2.0, clsx@npm:^1.2.1":
+"clsx@npm:^1.2.0, clsx@npm:^1.2.1":
   version: 1.2.1
   resolution: "clsx@npm:1.2.1"
   checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
@@ -5005,7 +5005,7 @@ __metadata:
     "@docusaurus/module-type-aliases": 2.0.0-rc.1
     "@docusaurus/preset-classic": 2.0.0-rc.1
     "@mdx-js/react": ^1.6.22
-    "@skyra/discord-components-react": ^3.4.0
+    "@skyra/discord-components-react": ^3.4.1
     "@tsconfig/docusaurus": ^1.0.5
     "@typescript-eslint/eslint-plugin": ^5.30.7
     "@typescript-eslint/parser": ^5.30.7

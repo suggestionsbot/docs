@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@docusaurus/module-type-aliases", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
             ["@docusaurus/preset-classic", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
             ["@mdx-js/react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.6.22"],\
-            ["@skyra/discord-components-react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.0"],\
+            ["@skyra/discord-components-react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.1"],\
             ["@tsconfig/docusaurus", "npm:1.0.6"],\
             ["@typescript-eslint/eslint-plugin", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:5.30.7"],\
             ["@typescript-eslint/parser", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:5.30.7"],\
@@ -4167,11 +4167,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@skyra/discord-components-core", [\
-        ["npm:3.4.0", {\
-          "packageLocation": "./.yarn/cache/@skyra-discord-components-core-npm-3.4.0-6bd1716577-ccc84505f5.zip/node_modules/@skyra/discord-components-core/",\
+        ["npm:3.4.1", {\
+          "packageLocation": "./.yarn/cache/@skyra-discord-components-core-npm-3.4.1-dd9bc41999-8d3e962e05.zip/node_modules/@skyra/discord-components-core/",\
           "packageDependencies": [\
-            ["@skyra/discord-components-core", "npm:3.4.0"],\
-            ["@stencil/core", "npm:2.17.1"],\
+            ["@skyra/discord-components-core", "npm:3.4.1"],\
+            ["@stencil/core", "npm:2.18.1"],\
             ["clsx", "npm:1.2.1"],\
             ["hex-to-rgba", "npm:2.0.1"]\
           ],\
@@ -4179,18 +4179,18 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@skyra/discord-components-react", [\
-        ["npm:3.4.0", {\
-          "packageLocation": "./.yarn/cache/@skyra-discord-components-react-npm-3.4.0-c37e9e879a-2c7f26d4ae.zip/node_modules/@skyra/discord-components-react/",\
+        ["npm:3.4.1", {\
+          "packageLocation": "./.yarn/cache/@skyra-discord-components-react-npm-3.4.1-bbc4521bad-0422ad3d60.zip/node_modules/@skyra/discord-components-react/",\
           "packageDependencies": [\
-            ["@skyra/discord-components-react", "npm:3.4.0"]\
+            ["@skyra/discord-components-react", "npm:3.4.1"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.0", {\
-          "packageLocation": "./.yarn/__virtual__/@skyra-discord-components-react-virtual-7c50e0afbf/0/cache/@skyra-discord-components-react-npm-3.4.0-c37e9e879a-2c7f26d4ae.zip/node_modules/@skyra/discord-components-react/",\
+        ["virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.1", {\
+          "packageLocation": "./.yarn/__virtual__/@skyra-discord-components-react-virtual-f6055311ea/0/cache/@skyra-discord-components-react-npm-3.4.1-bbc4521bad-0422ad3d60.zip/node_modules/@skyra/discord-components-react/",\
           "packageDependencies": [\
-            ["@skyra/discord-components-react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.0"],\
-            ["@skyra/discord-components-core", "npm:3.4.0"],\
+            ["@skyra/discord-components-react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.1"],\
+            ["@skyra/discord-components-core", "npm:3.4.1"],\
             ["@types/react", null],\
             ["@types/react-dom", null],\
             ["react", "npm:17.0.2"],\
@@ -4219,10 +4219,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["@stencil/core", [\
-        ["npm:2.17.1", {\
-          "packageLocation": "./.yarn/cache/@stencil-core-npm-2.17.1-5a963b18f3-dc660f9219.zip/node_modules/@stencil/core/",\
+        ["npm:2.18.1", {\
+          "packageLocation": "./.yarn/cache/@stencil-core-npm-2.18.1-2b11cce1bb-5be827077b.zip/node_modules/@stencil/core/",\
           "packageDependencies": [\
-            ["@stencil/core", "npm:2.17.1"]\
+            ["@stencil/core", "npm:2.18.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -7552,7 +7552,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@docusaurus/module-type-aliases", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
             ["@docusaurus/preset-classic", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
             ["@mdx-js/react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.6.22"],\
-            ["@skyra/discord-components-react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.0"],\
+            ["@skyra/discord-components-react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.1"],\
             ["@tsconfig/docusaurus", "npm:1.0.6"],\
             ["@typescript-eslint/eslint-plugin", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:5.30.7"],\
             ["@typescript-eslint/parser", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:5.30.7"],\
