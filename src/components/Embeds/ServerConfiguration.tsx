@@ -20,6 +20,10 @@ export default function ServerConfiguration(): JSX.Element {
             <DiscordMention type='channel'>suggestion_logs</DiscordMention>
             <br />
             Dm responses: I will DM users on actions such as suggest
+            <br />
+            I will create threads for new suggestions
+            <br />
+            Suggestion logs will be kept in your logs channel.
           </span>
         </>
       }
