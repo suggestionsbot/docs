@@ -24,7 +24,6 @@ export default function ServerConfiguration(): JSX.Element {
         </>
       }
       thumbnail={false}
-      ephemeral
     />
   );
 }

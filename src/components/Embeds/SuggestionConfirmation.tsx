@@ -1,7 +1,7 @@
 import React from 'react';
 import { DiscordBold, DiscordMention } from '@skyra/discord-components-react';
 
-import { EmbedColor } from '../../constants';
+import { EmbedColor, SuggestionStatus } from '../../constants';
 import SuggestionEmbed from './SuggestionEmbed';
 
 type EmbedProps = {
@@ -9,7 +9,7 @@ type EmbedProps = {
   response?: boolean;
 };
 
-const EmbedStatus: Record<EmbedProps['status'], EmbedColor> = {
+const EmbedStatus: Record<SuggestionStatus, EmbedColor> = {
   pending: EmbedColor.MAIN,
   approved: EmbedColor.APPROVED,
   rejected: EmbedColor.REJECTED,

@@ -5,6 +5,8 @@ export enum EmbedColor {
   ERROR = '#d63031',
 }
 
+export type SuggestionStatus = 'pending' | 'approved' | 'rejected';
+
 export enum ErrorCode {
   SUGGESTION_MESSAGE_DELETED = 1,
   MISSING_PERMISSIONS = 2,
@@ -30,7 +32,15 @@ export type EmbedProps = {
   footer?: JSX.Element;
   thumbnail?: boolean;
   displayEmbedAuthor?: boolean;
+};
+
+export type MessageProps = {
   ephemeral?: boolean;
+  buttons?: boolean;
+  thread?: {
+    name: string;
+    description: string;
+  };
 };
 
 export type ErrorEmbedProps = {

@@ -3,26 +3,34 @@ sidebar_position: 2
 title: Managing Suggestions
 description: Use the easy but powerful suggestion management to stay organized in your Discord.
 ---
+import SuggestionEmbedMessage from '@site/src/components/SuggestionEmbedMessage';
 import PendingSuggestion from '@site/src/components/Embeds/PendingSuggestion';
 import SuggestionConfirmation from '@site/src/components/Embeds/SuggestionConfirmation';
 import SuggestionStatusEmbed from '@site/src/components/Embeds/SuggestionStatusEmbed';
 
-_**Key:**_  
-`< >` = Required  
+_**Key:**_
+`< >` = Required
 `[ ]` = Optional
 
 **Note:** The above placeholders are _not_ required. They are simply to show you what the required fields are. The bot will tell you what fields are required.
 
-`|` = Means "or"  
+`|` = Means "or"
 `administrator` = A user with the **Manage Server** permission
 
 Managing suggestions is simple. Each suggestion is assigned a **Suggestion ID** \(sID\). From there, staff members can either approve, reject, or add a note to a suggestion with the sID. The sID is located in the footer of each suggestion:
 
-<PendingSuggestion />
+<SuggestionEmbedMessage
+  embed={<PendingSuggestion />}
+  message={{
+    buttons: true
+  }}
+/>
 
 You can also find the sID in the message the bot sends after you send a suggestion.
 
-<SuggestionConfirmation status="pending" />
+<SuggestionEmbedMessage
+  embed={<SuggestionConfirmation status="pending" />}
+/>
 
 Alternatively, you can use the message ID of the suggestion message to manage a suggestion, especially if you're using the bot on mobile. Click [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to check out a tutorial on how to find a message ID.
 
@@ -54,15 +62,21 @@ Suggestions are approved via either the sID or message ID. Once you have it, run
 * The results of that suggestion will be posted to the suggestion logs channel.
 * _An optional response can be added by running_ `/approve <sID|message ID> [response]`.
 
-<SuggestionStatusEmbed status="approved" />
+<SuggestionEmbedMessage
+  embed={<SuggestionStatusEmbed status="approved" />}
+/>
 
 An optional response may also be left on suggestions when approving:
 
-<SuggestionStatusEmbed status="approved" response />
+<SuggestionEmbedMessage
+  embed={<SuggestionStatusEmbed status="approved" response />}
+/>
 
 If you enabled DM responses and the user has enabled them, they will receive a DM that their suggestion has been approved.
 
-<SuggestionConfirmation status="approved" />
+<SuggestionEmbedMessage
+  embed={<SuggestionConfirmation status="approved" />}
+/>
 
 It seems like a lot, doesn't it? It really isn't, because it all happens in the matter of seconds!
 
@@ -70,13 +84,19 @@ It seems like a lot, doesn't it? It really isn't, because it all happens in the 
 
 Rejecting suggestions work the same way as approving suggestions. Once you run the command `/reject <sID|message ID> [response]`, the same series of actions will happen as stated above, but information of the suggestion being rejected will be posted instead.
 
-<SuggestionStatusEmbed status="rejected" />
+<SuggestionEmbedMessage
+  embed={<SuggestionStatusEmbed status="rejected" />}
+/>
 
 Just like with approving suggestions, you can add an optional response to the rejection and receive a DM from the bot (if applicable).
 
-<SuggestionStatusEmbed status="rejected" response />
+<SuggestionEmbedMessage
+  embed={<SuggestionStatusEmbed status="rejected" response />}
+/>
 
-<SuggestionConfirmation status="rejected" />
+<SuggestionEmbedMessage
+  embed={<SuggestionConfirmation status="rejected" />}
+/>
 
 ## Suggestions Logging
 
@@ -89,7 +109,9 @@ When a suggestion is approved or rejected, the following information will be log
 * the sID
 * the response (if one was given)
 
-<SuggestionConfirmation status="approved" response />
+<SuggestionEmbedMessage
+  embed={<SuggestionConfirmation status="approved" response />}
+/>
 
 If you wish to set up the suggestion logs channel, you may refer to the steps below:
 
