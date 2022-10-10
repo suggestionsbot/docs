@@ -36,4 +36,4 @@ Once the bot is in your server, there are a few housekeeping things you need to 
    2. Disable **Send Messages** and **Add Reactions** for `@everyone` to only allow the bot to send messages and to prevent users from adding message reactions.
 3. Adjust the permissions of the `approve` and `reject` slash commands in your server's settings via the [Integrations](https://support.discord.com/hc/en-us/articles/360045093012-Server-Integrations-Page) page.
 
-Once you completed those steps, you should be set to go! Go to [Managing Suggestions](managing-suggestions.md) for more information on approving/rejecting suggestions.
+Once you completed those steps, you should be set to go! Go to [Managing Suggestions](managing-suggestions.mdx) for more information on approving/rejecting suggestions.
