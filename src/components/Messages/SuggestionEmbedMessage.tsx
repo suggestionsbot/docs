@@ -8,8 +8,8 @@ import {
   DiscordThread,
 } from '@skyra/discord-components-react';
 
-import { EmbedProps, MessageProps } from '../constants';
-import SuggestionEmbed from './Embeds/SuggestionEmbed';
+import { EmbedProps, MessageProps } from '../../constants';
+import SuggestionEmbed from '../Embeds/SuggestionEmbed';
 
 type SuggestionEmbedMessageProps = {
   message?: MessageProps;

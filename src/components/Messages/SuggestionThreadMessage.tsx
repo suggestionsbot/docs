@@ -1,6 +1,6 @@
 import React from 'react';
 
-import PendingSuggestion from './Embeds/PendingSuggestion';
+import PendingSuggestion from '../Embeds/PendingSuggestion';
 import SuggestionEmbedMessage from './SuggestionEmbedMessage';
 
 export default function SuggestionThreadMessage(): JSX.Element {
