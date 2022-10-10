@@ -45,11 +45,15 @@ Approve a submitted suggestion via its suggestion ID (sID) or message ID with an
 
 ### Config Command
 ```
-/config [setting] [value]
+/config get [setting]
+/config <setting> <value>
 ```
-View and update various configuration settings of the bot. You can check a specific setting by running `/config get [setting]` and update a specific setting by running `/config [setting] [value]`.
+View and update various configuration settings of the bot.
+- You can check a specific setting by running `/config get [setting]`
+- You can view an overview of all settings by running `/config get`
+- You can update a specific setting by running `/config <setting> <value>`
 
-The bot will display a list of available options for ease of use.
+Read more about configuring the bot via the [configuration](configuration.mdx) page.
 
 ### DM Command
 ```
