@@ -44,23 +44,22 @@ Usage: `/config get config:Log channel` (to view) or `/config logs channel:<chan
 You can either view or set the channel where suggestion results will be posted after a suggestion is approved or denied. The options to pass through follow the same as setting the [Suggestions Channel](#suggestions-channel).
 
 ## DM Responses
-Usage: `/config get config:Dm responses` or `/config dm <enable|disable>`
+Usage: `/config get config:Dm responses` (to view) or `/config dm <enable|disable>` (to set)
 
 You can either view if DM responses are enabled/disabled or enable/disable them if you wish.
 
 When disabling DM responses, the bot won't DM the user on these actions:
 
-- A suggestion is submitted
+- A suggestion is submitted (an ephemeral message will be sent instead)
 - A suggestion is approved
 - A suggestion is rejected
-- A note is added to a suggestion
 
-Users are also able to configure their own DM settings using the `/dm <enable|disable>` command. This allows a user to choose their own preferences. However, they cannot override your server's settings.
+Users are also able to configure their own DM settings using the `/dm <enable|disable>` command. This allows a user to choose their own preferences at the guild level. However, they cannot override your server's settings.
 
 This means if you disabled DMs via the `/config` command, the user will not be able to receive them if they tried to enable them.
 
 ## Suggestion Thread Channels
-Usage: `/config get config:Threads for suggestions` or `/config thread <enable|disable>`
+Usage: `/config get config:Threads for suggestions` (to view) or `/config thread <enable|disable>` (to set)
 You can either view if thread channels are automatically created or not when a suggestion is submitted or enable/disable the thread from being created.
 
 <SuggestionThreadMessage />
@@ -68,8 +67,11 @@ You can either view if thread channels are automatically created or not when a s
 At this time, threads are not automatically archived when suggestions are approved and rejected, so you will have to moderate this manually.
 
 ## Keep Suggestion Logs
-Usage: `/config get config:Keep logs` or `/config keeplogs <enable/disable>`
+Usage: `/config get config:Keep logs` (to view) or `/config keeplogs <enable|disable>` (to set)
 
 When enabled, this configuration allows a suggestion to remain in the channel when approved or rejected vs. the bot being deleting the original message and posting the results to the set configuration channel.
 
-[//]: # (TODO: Post GIFs of the approval/rejection with both keeplogs enabled and disabled)
+## Anonymous Suggestions
+Usage `/config get config:Anonymous suggestions` (to view) or `/config anonymous <enable|disable>`
+
+When enabled, this configuration allows users to optionally submit a suggestion as anonymous, omitting any of their profile infomation from the suggestion. Read more about this feature [here](anonymous-suggestions.mdx).

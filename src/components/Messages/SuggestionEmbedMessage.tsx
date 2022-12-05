@@ -6,6 +6,7 @@ import {
   DiscordMessage,
   DiscordButton,
   DiscordThread,
+  DiscordCommand,
 } from '@skyra/discord-components-react';
 
 import { EmbedProps, MessageProps } from '../../constants';
@@ -16,15 +17,26 @@ type SuggestionEmbedMessageProps = {
   embed?: EmbedProps | JSX.Element;
 };
 
-export default function SuggestionEmbedMessage({
-  message,
-  embed,
-}: SuggestionEmbedMessageProps) {
+export default function SuggestionEmbedMessage(
+  options: SuggestionEmbedMessageProps,
+) {
   return (
     <DiscordMessages>
-      <DiscordMessage profile='suggestions' ephemeral={message?.ephemeral}>
-        {'color' in embed ? <SuggestionEmbed {...embed} /> : embed}
-        {message?.buttons && (
+      <DiscordMessage
+        profile='suggestions'
+        ephemeral={options.message?.ephemeral}>
+        {options.message?.command && (
+          <DiscordCommand
+            slot='reply'
+            profile='anthony'
+            command={options.message.command.name}></DiscordCommand>
+        )}
+        {'color' in options.embed ? (
+          <SuggestionEmbed {...options.embed} />
+        ) : (
+          options.embed
+        )}
+        {options.message?.buttons && (
           <DiscordAttachments slot='components'>
             <DiscordActionRow>
               <DiscordButton
@@ -38,9 +50,9 @@ export default function SuggestionEmbedMessage({
             </DiscordActionRow>
           </DiscordAttachments>
         )}
-        {message?.thread && (
-          <DiscordThread slot='thread' name={message.thread.name}>
-            {message.thread.description}
+        {options.message?.thread && (
+          <DiscordThread slot='thread' name={options.message.thread.name}>
+            {options.message.thread.description}
           </DiscordThread>
         )}
       </DiscordMessage>

@@ -1,0 +1,95 @@
+---
+sidebar_position: 4
+title: Context Menu
+description: Learn how to use the bot more effectively through Discord's context menu.
+---
+import ViewVoters from '@site/src/components/Embeds/ViewVoters';
+import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
+import ErrorEmbed from '@site/src/components/Embeds/ErrorEmbed';
+
+We use the context menu every time we use Discord. Whether it's to delete a message, add a reaction or perform a moderation action, it's a go-to way of using Discord.
+
+Fortunately, the Suggestions bot does not fall short regarding leveraging the context menu. You're able to perform different actions, such as seeing who upvoted a suggestion or simply approving a suggestion via right-clicking (or long holding) on suggestions.
+
+On this page, we'll let you know what each command in the context menu does. These are message commands as you invoke them by right-clicking on a message.
+
+## Usage
+To invoke a message command via the context menu, simply right click or long press the suggestion message. If you go to the "Apps" option, you'll see the following commands:
+
+- [Approve suggestion](#approve-suggestion)
+- [Reject suggestion](#reject-suggestion)
+- [View down voters](#view-down-voters)
+- [View up voters](#view-up-voters)
+- [View voters](#view-voters)
+
+You will need the `Send Messages` permission in the channel you're doing this in. Otherwise, the "Apps" sub-menu will not display.
+
+## Approve Suggestion
+This is a shortcut to using the [`/approve`](managing-suggestions.mdx#approving-suggestions) command.
+
+The bot will throw an error if the suggestion does not exist on the message.
+
+<ErrorEmbed
+  title="Command failed"
+  description="This message does not look like a suggestions message."
+  code={5}
+  command={{
+    name: 'Approve suggestion'
+  }}
+/>
+
+## Reject Suggestion
+This is a shortcut to using the [`/reject`](managing-suggestions.mdx#rejecting-suggestions) command.
+
+The bot will throw an error if the suggestion does not exist on the target message.
+
+<ErrorEmbed
+  title="Command failed"
+  description="This message does not look like a suggestions message."
+  code={5}
+  command={{
+    name: 'Reject suggestion'
+  }}
+/>
+
+## View up voters
+This command will return a message displaying all the up voters on a suggestion.
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="upvoters" />}
+  message={{
+    command: {
+      name: 'View up voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
+
+## View down voters
+This command will return a message displaying all the down voters on a suggestion.
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="downvoters" />}
+  message={{
+    command: {
+      name: 'View down voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
+
+## View voters
+This command will return a message displaying all voters on a suggestion.
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="all" />}
+  message={{
+    command: {
+      name: 'View voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
