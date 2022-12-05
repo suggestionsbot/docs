@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@docusaurus/eslint-plugin", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
             ["@docusaurus/module-type-aliases", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
             ["@docusaurus/preset-classic", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
+            ["@docusaurus/types", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.2.0"],\
             ["@mdx-js/react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.6.22"],\
             ["@skyra/discord-components-react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.1"],\
             ["@tsconfig/docusaurus", "npm:1.0.6"],\
@@ -3721,6 +3722,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["npm:2.2.0", {\
+          "packageLocation": "./.yarn/cache/@docusaurus-types-npm-2.2.0-aeaf5e0f85-5166ca49bb.zip/node_modules/@docusaurus/types/",\
+          "packageDependencies": [\
+            ["@docusaurus/types", "npm:2.2.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
         ["virtual:9864bbdc6516b56584d36c2e3c8e064e36396a4f5f663fe6c5c323b9e262a8859042581231873a2e2644c458034a105e934600ac0f2e1718c8a140d7f9356602#npm:2.0.0-rc.1", {\
           "packageLocation": "./.yarn/__virtual__/@docusaurus-types-virtual-3192cae526/0/cache/@docusaurus-types-npm-2.0.0-rc.1-88946c46d5-cde2d57189.zip/node_modules/@docusaurus/types/",\
           "packageDependencies": [\
@@ -3740,6 +3748,29 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packagePeers": [\
             "@types/react-dom",\
             "@types/react",\
+            "react-dom",\
+            "react"\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.2.0", {\
+          "packageLocation": "./.yarn/__virtual__/@docusaurus-types-virtual-78b8acee86/0/cache/@docusaurus-types-npm-2.2.0-aeaf5e0f85-5166ca49bb.zip/node_modules/@docusaurus/types/",\
+          "packageDependencies": [\
+            ["@docusaurus/types", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.2.0"],\
+            ["@types/history", "npm:4.7.11"],\
+            ["@types/react", "npm:18.0.15"],\
+            ["@types/react-dom", null],\
+            ["commander", "npm:5.1.0"],\
+            ["joi", "npm:17.6.0"],\
+            ["react", "npm:17.0.2"],\
+            ["react-dom", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:17.0.2"],\
+            ["react-helmet-async", "virtual:9864bbdc6516b56584d36c2e3c8e064e36396a4f5f663fe6c5c323b9e262a8859042581231873a2e2644c458034a105e934600ac0f2e1718c8a140d7f9356602#npm:1.3.0"],\
+            ["utility-types", "npm:3.10.0"],\
+            ["webpack", "virtual:f3339f4d6dcbca85c3e2018e759b8d77952d55b2f1df110296afaaf062c13eb3733d58e3b0946f16e47fd828e4d78f377ac9f906b7e532836e67e7b739eda359#npm:5.73.0"],\
+            ["webpack-merge", "npm:5.8.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react-dom",\
             "react-dom",\
             "react"\
           ],\
@@ -7551,6 +7582,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@docusaurus/eslint-plugin", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
             ["@docusaurus/module-type-aliases", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
             ["@docusaurus/preset-classic", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.0.0-rc.1"],\
+            ["@docusaurus/types", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:2.2.0"],\
             ["@mdx-js/react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:1.6.22"],\
             ["@skyra/discord-components-react", "virtual:f245e2efefeea8f2e87d1ac6563152b57ada9a2cb2c85ba0b00e0412c1df74a0c13d19c29df2160b49a40e83eff87a65b114cfca02aaa48862061487b8443207#npm:3.4.1"],\
             ["@tsconfig/docusaurus", "npm:1.0.6"],\
