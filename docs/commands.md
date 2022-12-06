@@ -1,5 +1,5 @@
 ---
-sidebar_position: 6
+sidebar_position: 2
 title: Commands
 description: View all the available commands and detailed information of the Suggestions bot.
 ---
