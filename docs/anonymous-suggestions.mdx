@@ -15,15 +15,19 @@ Once enabled, users can optionally mark their suggestions as anonymous, omitting
 Learn below how you can utilize this feature in your server today!
 
 ## Getting Started
+
 To start allowing the submission of anonymous suggestions, enable the feature with the `/config anonymous enable` command. The feature is disabled by default.
 
 <SuggestionSlashReply command="/config anonymous enable" message="I have enabled anonymous suggestions for this guild." />
 
 ## Usage
+
 Once enabled, all the user has to when submitting their suggestion is set the `anonymously` option to `true`.
+
 ```
 /config suggest:Bring out Wumpus to meet the fans! anonymously:True
 ```
+
 The suggestion is submitted normally. However, any identifying information such as the profile icon and user ID is removed from the suggestion.
 
 <SuggestionEmbedMessage
@@ -35,6 +39,7 @@ The suggestion is submitted normally. However, any identifying information such 
 />
 
 ## Managing Suggestions
+
 When approving or rejecting suggestions, everything is the same as explained over in the [Managing Suggestions](/managing-suggestions.mdx) section. However, once again, the user's profile information is omitted from the suggestion.
 
 <SuggestionEmbedMessage
@@ -43,6 +48,7 @@ When approving or rejecting suggestions, everything is the same as explained ove
 />
 
 ## More Information
+
 As the actual submitter of the suggestion remains anonymous, the voters are not anonymous. Currently, the feature is mainly designed for the suggestion submitter itself.
 
 For moderation reasons, we still log information such as the user ID of the submitted suggestion. This helps us combat any reported abuse with the bot and to continue our efforts in collecting statistics (more in our [Privacy Policy](https://suggestions.gg/privacy)).

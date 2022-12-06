@@ -8,9 +8,11 @@ import PendingSuggestion from '@site/src/components/Embeds/PendingSuggestion';
 import SuggestionConfirmation from '@site/src/components/Embeds/SuggestionConfirmation';
 import SuggestionStatusEmbed from '@site/src/components/Embeds/SuggestionStatusEmbed';
 
-_**Key:**_
-`< >` = Required
-`[ ]` = Optional
+## Key
+| Key                 | Description                                            |
+|---------------------|--------------------------------------------------------|
+| `< >`               | Required                                               |
+| `[ ]`               | Optional                                               |
 
 **Note:** The above placeholders are _not_ required. They are simply to show you what the required fields are. The bot will tell you what fields are required.
 
@@ -41,6 +43,7 @@ However, you won't have to worry too much about trying to remember IDs. The bot 
 If you haven't already done so, please refer to the [Getting Started](intro.md#setting-up-the-bot) section to set up slash command permissions. By default, only administrators can manage suggestions. However, if you want other staff members to have access to these commands, please refer to the aforementioned section.
 
 ## DM Responses
+
 DM responses are sent to the suggestion submitter based on various actions. DM responses may be toggled by running `/config dm <enable/disable>`. This means DMs to the suggestion submitter will or won't be sent via these actions based on how you configure the bot for your server:
 
 - suggestion submitted
@@ -52,15 +55,14 @@ By default, DM responses are enabled. This can be configured by an administrator
 
 Users can also individually choose if they wish to receive DM responses. This can be configured by running `/dm <enable|disable>`. This will override the server-wide setting unless the server has disabled DM responses.
 
-
 ## Approving Suggestions
 
 Suggestions are approved via either the sID or message ID. Once you have it, run the command `/approve <sID|message ID>`. Afterward, series of actions will happen:
 
-* The suggestion will update as "Approved" in the suggestions channel and its results will be logged.
-* The user will receive a DM that you approved their suggestion.
-* The results of that suggestion will be posted to the suggestion logs channel.
-* _An optional response can be added by running_ `/approve <sID|message ID> [response]`.
+- The suggestion will update as "Approved" in the suggestions channel and its results will be logged.
+- The user will receive a DM that you approved their suggestion.
+- The results of that suggestion will be posted to the suggestion logs channel.
+- _An optional response can be added by running_ `/approve <sID|message ID> [response]`.
 
 <SuggestionEmbedMessage
   embed={<SuggestionStatusEmbed status="approved" />}
@@ -102,12 +104,12 @@ Just like with approving suggestions, you can add an optional response to the re
 
 When a suggestion is approved or rejected, the following information will be logged:
 
-* the results (this is from the vote count collected via the vote buttons)
-* the suggestion
-* the submitter
-* the staff member that approved or rejected the suggestion
-* the sID
-* the response (if one was given)
+- the results (this is from the vote count collected via the vote buttons)
+- the suggestion
+- the submitter
+- the staff member that approved or rejected the suggestion
+- the sID
+- the response (if one was given)
 
 <SuggestionEmbedMessage
   embed={<SuggestionConfirmation status="approved" response />}

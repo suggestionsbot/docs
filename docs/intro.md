@@ -9,10 +9,12 @@ To invite the bot, you may use [this link](https://discord.com/api/oauth2/author
 Here you can choose the server you wish to invite the bot to and choose what permissions it should have. It's best to leave the permissions alone, or you'll most likely run into issues. By default, the bot is assigned the following [scopes](https://discord.com/developers/docs/topics/oauth2#shared-resources-oauth2-scopes) and [permissions](https://support.discord.com/hc/en-us/articles/206029707-Setting-Up-Permissions-FAQ):
 
 Scopes:
+
 * `bot`
 * `applications.commands`
 
 Permissions:
+
 * Read Messages/View Channels
 * Send Messages
 * Create Public Threads
@@ -29,7 +31,7 @@ The bot now uses application/slash commands. This provides better integration in
 
 Once the bot is in your server, there are a few housekeeping things you need to do. (You must have the **Manage Server** permission to complete these steps.)
 
-1. Create and set a suggestions channel by running `/config channel <channel>`. 
+1. Create and set a suggestions channel by running `/config channel <channel>`.
    1. Add the bot to that channel's permissions and exclusively give it the permissions **Send Messages** and **Add Reactions**. (Add additional permissions depending on what you gave the bot in your server.)
    2. Disable **Send Messages** and **Add Reactions** for `@everyone` to only allow the bot to send messages and to prevent users from adding unnecessary message reactions.
 2. Set up your logs/results channel for approved/rejected suggestions by running `/config logs <channel>`.
