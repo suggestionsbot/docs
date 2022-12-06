@@ -7,7 +7,11 @@ import { EmbedColor } from '../../constants';
 
 import SuggestionEmbed from './SuggestionEmbed';
 
-export default function PendingSuggestion(): JSX.Element {
+export default function PendingSuggestion({
+  anonymous,
+}: {
+  anonymous?: boolean;
+}): JSX.Element {
   return (
     <>
       <SuggestionEmbed
@@ -15,7 +19,7 @@ export default function PendingSuggestion(): JSX.Element {
           <>
             <DiscordBold>Submitter</DiscordBold>
             <br />
-            anthony#8577
+            {anonymous ? 'Anonymous' : 'anthony#8577'}
             <br />
             <br />
             <DiscordBold>Suggestion</DiscordBold>
@@ -36,8 +40,13 @@ export default function PendingSuggestion(): JSX.Element {
           </>
         }
         color={EmbedColor.MAIN}
-        footer={<>User ID: 158063324699951104 | sID: lrt97z1s</>}
+        footer={
+          <>{`${
+            anonymous ? '' : 'User ID: 158063324699951104 | '
+          }sID: lrt97z1s`}</>
+        }
         displayEmbedAuthor={false}
+        anonymous={anonymous}
       />
     </>
   );

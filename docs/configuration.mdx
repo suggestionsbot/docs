@@ -7,21 +7,24 @@ import ServerConfiguration from '@site/src/components/Embeds/ServerConfiguration
 import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
 import SuggestionThreadMessage from '@site/src/components/Messages/SuggestionThreadMessage';
 
-_**Key:**_
-`< >` = Required
-`[ ]` = Optional
 
-**Note:** The placeholder characters `< >` and `[ ]` are *not* required when running commands.
+## Key
+| Key                 | Description                                            |
+|---------------------|--------------------------------------------------------|
+| `< >`               | Required                                               |
+| `[ ]`               | Optional                                               |
+| <code>&vert;</code> | Means "or"                                             |
+| `bot`               | Refers to the Suggestions bot                          |
+| `administrator`     | Refers to a user with the **Manage Server** permission |
 
-`|` = Means "or"
-`bot` = Refers to the Suggestions bot
-`administrator` = Refers to a user with the **Manage Server** permission
+**Note:** The placeholder characters `< >` and `[ ]` are _not_ required when running commands.
 
 One of the core components of the bot is the fact that the administrators can configure various aspects of the bot to their liking. From the suggestions channel to DM responses, you can take control of your server's experience.
 
 With Discord's slash commands, it's easy to configure the bot with readable and UI-friendly commands and options.
 
 Configuring the bot is really easy. The format goes as:
+
 - To view the current configuration, run `/config get`.
 - To view the information of a specific option, run `/config get [option]`. The bot will give you a list of all available options to choose from.
 - To set a specific option, run `/config <option> <value>`.
@@ -34,33 +37,36 @@ Here is an overview of all the configurable options. Keep scrolling for more inf
 />
 
 ## Suggestions Channel
-Usage: `/config get config:Suggestions channel` (to view) or `/config channel:<channel>` (to set)
+
+Usage: `/config get config:Suggestions channel` (to view) or `/config channel channel:<channel>` (to set)
 
 You can either view or set the channel where suggestions will be posted. You will be able to choose from a list of text channels in your server.
 
 ## Suggestions Logs Channel
+
 Usage: `/config get config:Log channel` (to view) or `/config logs channel:<channel>` (to set)
 
 You can either view or set the channel where suggestion results will be posted after a suggestion is approved or denied. The options to pass through follow the same as setting the [Suggestions Channel](#suggestions-channel).
 
 ## DM Responses
-Usage: `/config get config:Dm responses` or `/config dm <enable|disable>`
+
+Usage: `/config get config:Dm responses` (to view) or `/config dm <enable|disable>` (to set)
 
 You can either view if DM responses are enabled/disabled or enable/disable them if you wish.
 
 When disabling DM responses, the bot won't DM the user on these actions:
 
-- A suggestion is submitted
+- A suggestion is submitted (an ephemeral message will be sent instead)
 - A suggestion is approved
 - A suggestion is rejected
-- A note is added to a suggestion
 
 Users are also able to configure their own DM settings using the `/dm <enable|disable>` command. This allows a user to choose their own preferences. However, they cannot override your server's settings.
 
 This means if you disabled DMs via the `/config` command, the user will not be able to receive them if they tried to enable them.
 
 ## Suggestion Thread Channels
-Usage: `/config get config:Threads for suggestions` or `/config thread <enable|disable>`
+
+Usage: `/config get config:Threads for suggestions` (to view) or `/config thread <enable|disable>` (to set)
 You can either view if thread channels are automatically created or not when a suggestion is submitted or enable/disable the thread from being created.
 
 <SuggestionThreadMessage />
@@ -68,8 +74,13 @@ You can either view if thread channels are automatically created or not when a s
 At this time, threads are not automatically archived when suggestions are approved and rejected, so you will have to moderate this manually.
 
 ## Keep Suggestion Logs
-Usage: `/config get config:Keep logs` or `/config keeplogs <enable/disable>`
+
+Usage: `/config get config:Keep logs` (to view) or `/config keeplogs <enable|disable>` (to set)
 
 When enabled, this configuration allows a suggestion to remain in the channel when approved or rejected vs. the bot being deleting the original message and posting the results to the set configuration channel.
 
-[//]: # (TODO: Post GIFs of the approval/rejection with both keeplogs enabled and disabled)
+## Anonymous Suggestions
+
+Usage `/config get config:Anonymous suggestions` (to view) or `/config anonymous <enable|disable>`
+
+When enabled, this configuration allows users to optionally submit a suggestion as anonymous, omitting any of their profile infomation from the suggestion. Read more about this feature [here](anonymous-suggestions.mdx).

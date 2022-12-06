@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 7
 title: Error Codes
 description: Find more information on various error codes the bot can provide and what to do about it.
 ---
@@ -7,6 +7,7 @@ import ErrorEmbed from '@site/src/components/Embeds/ErrorEmbed';
 import { DiscordInlineCode } from '@skyra/discord-components-react';
 
 ## Table
+
 | Code | Name                                       | Guide                                                |
 |------|--------------------------------------------|------------------------------------------------------|
 | 1    | SUGGESTION_MESSAGE_DELETED                 | [click](#suggestion-message-deleted)                 |
@@ -29,10 +30,12 @@ import { DiscordInlineCode } from '@skyra/discord-components-react';
 ## Error Information
 
 ### Suggestion Message Deleted
+
 This error is thrown when attempting to manage a suggestion which its corresponding message has been deleted.
 <ErrorEmbed title="Command failed" description="Looks like this suggestion was deleted." code={1} />
 
 ### Missing Permissions
+
 This error is thrown when the bot is missing permissions to perform an action, and it knows what permissions are missing.
 
 The required permissions will be displayed in the error message.
@@ -50,6 +53,7 @@ The required permissions will be displayed in the error message.
   code={2} />
 
 ### Missing Suggestions Channel
+
 This error is thrown when attempting to run a command which requires a configured suggestions channel, but one does not exist.
 <ErrorEmbed
   title="Missing Suggestions Channel"
@@ -66,6 +70,7 @@ This error is thrown when attempting to run a command which requires a configure
   code={3} />
 
 ### Missing Log Channel
+
 This error is thrown when attempting to run a command which requires a configured suggestions log channel, but one does not exist.
 <ErrorEmbed
   title="Missing Suggestions Channel"
@@ -81,27 +86,32 @@ This error is thrown when attempting to run a command which requires a configure
   code={4} />
 
 ### Suggestion Not Found
+
 This error is thrown when the bot is unable to find a suggestion with the given ID.
 <ErrorEmbed title="Command failed" description="No suggestion exists  with this id." code={5} />
 
 ### Owner Only
+
 This error is thrown when attempting to run a command which is only available to the bot owners.
 <ErrorEmbed title="Command failed" description="You do not have permission to run this command." code={6} />
 
-
 ### Suggestion Content Too Long
+
 This error is thrown when the bot is unable to submit a suggestion with a content length greater than the configured maximum length of 1,000 characters.
 <ErrorEmbed title="Command failed" description="Your suggestion content was too long, please limit it to 1000 characters or less." code={7} />
 
 ### Invalid Guild Config Choice
+
 This error is thrown when trying to view an invalid configuration choice.
 <ErrorEmbed title="Command failed" description="The provided guild config choice doesn't exist." code={8} />
 
 ### Command On Cooldown
+
 This error is thrown when the bot is on cooldown for a command.
 <ErrorEmbed title="Command on Cooldown" description="Ahh man so fast! You must wait 3 seconds to run this command again" code={9} />
 
 ### Generic Forbidden
+
 This error is thrown as a generic response when the bot is forbidden from performing an action, and it cannot figure out what permissions are missing.
 <ErrorEmbed
   title="Unknown message"
@@ -114,6 +124,7 @@ This error is thrown as a generic response when the bot is forbidden from perfor
   code={10} />
 
 ### Unhandled Error
+
 This error is thrown when the bot is unable to handle an error. Please reach out to support if you see this message.
 <ErrorEmbed
   title="Something went wrong"
@@ -127,6 +138,7 @@ This error is thrown when the bot is unable to handle an error. Please reach out
   code={11} />
 
 ### Generic Not Found
+
 This error is thrown as a generic response when the bot is unable to find an item.
 <ErrorEmbed
   title="Command failed"
@@ -142,6 +154,7 @@ This error is thrown as a generic response when the bot is unable to find an ite
   code={12} />
 
 ### Configured Channel No Longer Exists
+
 This error is thrown when either the suggestions channel or suggestions logs channel can no longer be found. The error is displayed interchangeably.
 <ErrorEmbed
   title="Configuration Error"
@@ -155,14 +168,17 @@ This error is thrown when either the suggestions channel or suggestions logs cha
   code={13} />
 
 ### Missing Permissions In Suggestions Channel
+
 This error is thrown when the bot doesn't have permissions to use the configured suggestions channel.
 <ErrorEmbed title="Configuration Error" description="I do not have permission to use your guilds configured suggestions channel." code={14} />
 
 ### Missing Permissions In Logs Channel
+
 This error is thrown when the bot doesn't have permissions to use the configured suggestions logs channel.
 <ErrorEmbed title="Configuration Error" description="I do not have permission to use your guilds configured logs channel." code={15} />
 
 ### Missing Translation
+
 This error is thrown when attempting to translate a nonexistent localization key.
 <ErrorEmbed
   title="Something went wrong"

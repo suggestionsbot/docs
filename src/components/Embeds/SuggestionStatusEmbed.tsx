@@ -11,15 +11,19 @@ import SuggestionEmbed from './SuggestionEmbed';
 type EmbedProps = {
   response: boolean;
   status: 'approved' | 'rejected';
+  anonymous?: boolean;
 };
 
-export default function SuggestionStatusEmbed({
-  response,
-  status,
-}: EmbedProps): JSX.Element {
+export default function SuggestionStatusEmbed(
+  options: EmbedProps,
+): JSX.Element {
   return (
     <SuggestionEmbed
-      color={status === 'approved' ? EmbedColor.APPROVED : EmbedColor.REJECTED}
+      color={
+        options.status === 'approved'
+          ? EmbedColor.APPROVED
+          : EmbedColor.REJECTED
+      }
       description={
         <>
           <DiscordBold>Results</DiscordBold>
@@ -38,21 +42,25 @@ export default function SuggestionStatusEmbed({
           <br />
           <DiscordBold>Submitter</DiscordBold>
           <br />
-          <DiscordMention type='user'>anthony</DiscordMention>
+          {options.anonymous ? (
+            'Anonymous'
+          ) : (
+            <DiscordMention type='user'>anthony</DiscordMention>
+          )}
           <br />
           <br />
           <DiscordBold>
-            {status === 'approved' ? 'Approved' : 'Rejected'} By
+            {options.status === 'approved' ? 'Approved' : 'Rejected'} By
           </DiscordBold>
           <br />
           <DiscordMention type='user'>anthony</DiscordMention>
           <br />
           <br />
-          {response && (
+          {options.response && (
             <>
               <DiscordBold>Response</DiscordBold>
               <br />
-              {status === 'approved'
+              {options.status === 'approved'
                 ? 'Thank you for supporting Wumpus!'
                 : 'Sorry, Wumpus does not have enough fans...'}
             </>
@@ -60,6 +68,7 @@ export default function SuggestionStatusEmbed({
         </>
       }
       footer={<>sID: lrt97z1s</>}
+      displayEmbedAuthor
     />
   );
 }

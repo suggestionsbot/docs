@@ -10,7 +10,14 @@ if (ExecutionEnvironment.canUseDOM) {
         verified: true,
         roleColor: '#ffd663',
         roleIcon: 'https://cdn.discordapp.com/role-icons/603776935222444043/589987092edffb957b7f5a9fa69407b9.webp'
-      }
-    }
+      },
+      anthony: {
+        author: 'anthony',
+        avatar:
+          'https://cdn.discordapp.com/avatars/158063324699951104/d25a7deec7b308ddf8d4d152808f8058.png',
+        roleColor: '#ff5555',
+        roleIcon: '🛠️',
+      },
+    },
   };
 }

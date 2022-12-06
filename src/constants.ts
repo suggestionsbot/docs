@@ -32,6 +32,8 @@ export type EmbedProps = {
   footer?: JSX.Element;
   thumbnail?: boolean;
   displayEmbedAuthor?: boolean;
+  anonymous?: boolean;
+  displayTimestamp?: boolean;
 };
 
 export type MessageProps = {
@@ -41,10 +43,16 @@ export type MessageProps = {
     name: string;
     description: string;
   };
+  command?: {
+    name: string;
+  };
 };
 
 export type ErrorEmbedProps = {
   title: string;
   description: string | JSX.Element;
   code: ErrorCode;
+  command: {
+    name: string;
+  };
 };
