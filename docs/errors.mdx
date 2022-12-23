@@ -26,6 +26,7 @@ import { DiscordInlineCode } from '@skyra/discord-components-react';
 | 14   | MISSING_PERMISSIONS_IN_SUGGESTIONS_CHANNEL | [click](#missing-permissions-in-suggestions-channel) |
 | 15   | MISSING_PERMISSIONS_IN_LOGS_CHANNEL        | [click](#missing-permissions-in-logs-channel)        |
 | 16   | MISSING_TRANSLATION                        | [click](#missing-translation)                        |
+| 17   | SUGGESTION_RESOLUTION_ERROR                | [click](#suggestion-resolution-error)                        |
 
 ## Error Information
 
@@ -190,3 +191,15 @@ This error is thrown when attempting to translate a nonexistent localization key
     </>
   }
   code={16} />
+
+### Suggestion Resolution Error
+
+This error is thrown when something goes wrong while attempting to either approve or reject a suggestion.
+<ErrorEmbed
+  title="Something went wrong"
+  description={
+    <>
+      Please contact support.
+    </>
+  }
+  code={17} />
