@@ -28,6 +28,7 @@ import { DiscordInlineCode } from '@skyra/discord-components-react';
 | 16   | MISSING_TRANSLATION                              | [click](#missing-translation)                             |
 | 17   | SUGGESTION_RESOLUTION_ERROR                      | [click](#suggestion-resolution-error)                     |
 | 18   | MISSING_SEND_PERMISSIONS_IN_SUGGESTION_CHANNEL   | [click](#missing-send-permissions-in-suggestions-channel) |
+| 19   | MISSING_THREAD_CREATE_PERMISSIONS                | [click](#missing thread create permissions)               |
 
 ## Error Information
 
@@ -210,3 +211,12 @@ This error is thrown when something goes wrong while attempting to either approv
 
 This error is thrown when the bot is missing permissions to send messages in your suggestions channel.
 <ErrorEmbed title="Configuration Error" description="I do not have permission to send messages in your guilds suggestion channel." code={18} />
+
+
+### Missing thread create permissions
+
+This error is thrown when the bot cannot create threads in your suggestions channel.
+<ErrorEmbed
+    title="Missing permissions"
+    description="I am unable to create threads in this channel, please contact an administrator and ask them to give me these permissions."
+    code={19} />
