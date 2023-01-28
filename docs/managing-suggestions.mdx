@@ -19,6 +19,7 @@ import SuggestionStatusEmbed from '@site/src/components/Embeds/SuggestionStatusE
 `|` = Means "or"
 `administrator` = A user with the **Manage Server** permission
 
+## Overview
 Managing suggestions is simple. Each suggestion is assigned a **Suggestion ID** \(sID\). From there, staff members can either approve, reject, or add a note to a suggestion with the sID. The sID is located in the footer of each suggestion:
 
 <SuggestionEmbedMessage
@@ -37,6 +38,9 @@ You can also find the sID in the message the bot sends after you send a suggesti
 Alternatively, you can use the message ID of the suggestion message to manage a suggestion, especially if you're using the bot on mobile. Click [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to check out a tutorial on how to find a message ID.
 
 However, you won't have to worry too much about trying to remember IDs. The bot will autocomplete the suggestion ID as you type it out!
+
+### Suggestion Threads
+If enabled, you can have the bot [automatically create threads](configuration.mdx#suggestion-thread-channels) when a new suggestion is submitted as well as have them [automatically archived](configuration.mdx#auto-archive-threads) when a suggestion is approved or rejected. View the respective configuration sections for more information.
 
 ## Slash Command Permissions
 
@@ -62,7 +66,8 @@ Suggestions are approved via either the sID or message ID. Once you have it, run
 - The suggestion will update as "Approved" in the suggestions channel and its results will be logged.
 - The user will receive a DM that you approved their suggestion.
 - The results of that suggestion will be posted to the suggestion logs channel.
-- _An optional response can be added by running_ `/approve <sID|message ID> [response]`.
+- If a response has been added via `/approve <sID|message ID> [response]`, that will be displayed in the results message.
+- If the suggestion has a thread attached, it'll automatically be archived if enabled in the [configuration](configuration.mdx#auto-archive-threads).
 
 <SuggestionEmbedMessage
   embed={<SuggestionStatusEmbed status="approved" />}
