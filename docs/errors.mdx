@@ -29,6 +29,7 @@ import { DiscordInlineCode } from '@skyra/discord-components-react';
 | 17   | SUGGESTION_RESOLUTION_ERROR                      | [click](#suggestion-resolution-error)                     |
 | 18   | MISSING_SEND_PERMISSIONS_IN_SUGGESTION_CHANNEL   | [click](#missing-send-permissions-in-suggestions-channel) |
 | 19   | MISSING_THREAD_CREATE_PERMISSIONS                | [click](#missing-thread-create-permissions)               |
+| 20   | QUEUE_IMBALANCE                                  | [click](#queue-imbalance)                                 |
 
 ## Error Information
 
@@ -226,3 +227,17 @@ This error is thrown when the bot cannot create threads in your suggestions chan
       </>
     }
     code={19} />
+
+### Queue Imbalance
+
+This error is thrown when you attempt to use a suggestion in a queue which has already been used
+in a separate queue.
+
+<ErrorEmbed
+    title="Queue Imbalance"
+    description={
+      <>
+          This suggestion has already been handled in another queue.
+      </>
+    }
+    code={20} />
