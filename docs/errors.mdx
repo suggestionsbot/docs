@@ -30,6 +30,7 @@ import { DiscordInlineCode } from '@skyra/discord-components-react';
 | 18   | MISSING_SEND_PERMISSIONS_IN_SUGGESTION_CHANNEL   | [click](#missing-send-permissions-in-suggestions-channel) |
 | 19   | MISSING_THREAD_CREATE_PERMISSIONS                | [click](#missing-thread-create-permissions)               |
 | 20   | QUEUE_IMBALANCE                                  | [click](#queue-imbalance)                                 |
+| 21   | MISSING_QUEUE_CHANNEL                            | [click](#missing-queue-channel)                                 |
 
 ## Error Information
 
@@ -241,3 +242,20 @@ in a separate queue.
       </>
     }
     code={20} />
+
+### Missing Queue Channel
+
+This error is thrown when attempting to run a command which requires a configured
+suggestions queue channel, but one does not exist.
+<ErrorEmbed
+    title="Missing Queue Channel"
+    description={
+        <>
+            This command requires a queue channel to use.
+            <br /><br />
+            Please contact an administrator and ask them to set one up using the following command.
+            <br /><br />
+            <DiscordInlineCode>/config queue_channel</DiscordInlineCode>
+        </>
+    }
+    code={21} />
