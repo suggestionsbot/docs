@@ -30,7 +30,8 @@ import { DiscordInlineCode } from '@skyra/discord-components-react';
 | 18   | MISSING_SEND_PERMISSIONS_IN_SUGGESTION_CHANNEL   | [click](#missing-send-permissions-in-suggestions-channel) |
 | 19   | MISSING_THREAD_CREATE_PERMISSIONS                | [click](#missing-thread-create-permissions)               |
 | 20   | QUEUE_IMBALANCE                                  | [click](#queue-imbalance)                                 |
-| 21   | MISSING_QUEUE_CHANNEL                            | [click](#missing-queue-channel)                                 |
+| 21   | MISSING_QUEUE_CHANNEL                            | [click](#missing-queue-channel)                           |
+| 22   | BLOCKLISTED_USER                                 | [click](#blocklisted-user)                                |
 
 ## Error Information
 
@@ -259,3 +260,16 @@ suggestions queue channel, but one does not exist.
         </>
     }
     code={21} />
+
+### Blockedlisted User
+
+This error is thrown when attempting to run an action such as suggest
+but you have been blocked by an administrator within the guild.
+<ErrorEmbed
+    title="Blocked Action"
+    description={
+        <>
+            Administrators from this guild have removed your ability to run this action.
+        </>
+    }
+    code={22} />
