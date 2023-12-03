@@ -66,6 +66,11 @@ const config = {
             position: 'left',
           },
           {
+            to: 'changelog',
+            label: 'Changelog',
+            position: 'left'
+          },
+          {
             href: 'https://suggestions.gg/',
             label: 'Website',
             position: 'right',
