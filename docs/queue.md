@@ -3,8 +3,11 @@ sidebar_position: 8
 title: Suggestion Queue
 description: Learn how to utilize the suggestion queue to manage the flow of suggestions to the public.
 ---
+import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
 import QueueInfo from '@site/src/components/Embeds/QueueCommand/QueueInfo.tsx'
 import QueueView from '@site/src/components/Embeds/QueueCommand/QueueView.tsx'
+import QueueRejection from '@site/src/components/Embeds/QueueCommand/QueueRejection.tsx'
+import QueueViewResponseMessage from '@site/src/components/Messages/QueueViewResponseMessage.tsx'
 
 Gone are the days of constantly deleting duplicate suggestions or cleaning up thirty spam suggestions that your community despises looking at. Now comes the day when you, the server owner or administrator, can take control of what suggestions the public gets to vote on.
 
@@ -51,5 +54,23 @@ The first three buttons are self-explanatory. We'll talk about the last two more
 ### Approving a suggestion
 When you hit the green checkmark, you approve the suggestion for voting in your set suggestions channel. This action does _not_ mean that you have committed to approving the suggestion. You only approve it to be voted on.
 
+Once approved, the suggestion is moved to a pending state, allowing your users to vote. If the suggestion gets approved in this state, the message is updated, and the bot captures the results. The same goes if the suggestion gets rejected.
+
+Check below for example embeds on the previous actions.
+
+<QueueViewResponseMessage status="approved" />
+You'll receive this message in the channel when approving the selected queued suggestion.
+
 ### Rejecting a suggestion
-When you hit the red 'x' button, you reject and remove the suggestion from the queue. When this happens, the bot will also attempt to DM the author of the suggestion.
+When you hit the red 'x' button, you reject and remove the suggestion from the queue. When this happens, the bot will also attempt to [DM the author](configuration#dm-responses) of the suggestion about their suggestion's rejection.
+
+Check below for example embeds on the previous actions.
+
+<QueueViewResponseMessage status="rejected" />
+You'll receive this message in the channel when rejecting the selected queued suggestion.
+<br /> <br />
+
+<SuggestionEmbedMessage
+  embed={<QueueRejection />}
+/>
+The bot will also attempt to DM the user this message.

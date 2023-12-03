@@ -43,6 +43,9 @@ export default function QueueView(): JSX.Element {
           </DiscordAttachments>
         ),
         ephemeral: true,
+        command: {
+          name: '/queue view',
+        },
       }}
     />
   );
