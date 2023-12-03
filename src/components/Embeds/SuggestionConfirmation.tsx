@@ -21,6 +21,7 @@ export default function SuggestionConfirmation({
 }: EmbedProps): JSX.Element {
   return (
     <SuggestionEmbed
+      displayEmbedAuthor
       color={EmbedStatus[status]}
       description={
         <>
