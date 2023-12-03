@@ -49,6 +49,11 @@ These commands require the Manage Server (`MANAGE_GUILD`) permission.
 
 Approve a submitted suggestion via its suggestion ID (sID) or message ID with an optional response.
 
+| Option          | Description                                   | Example                                                                                | Required |
+|-----------------|-----------------------------------------------|----------------------------------------------------------------------------------------|----------|
+| `suggestion_id` | The sID you wish to approve                   | `/approve suggestion_id:abc123`                                                        | **true** |
+| `response`      | An optional response to add to the suggestion | `/approve suggestion_id:abc123 response:Expect this to be implemented in January 2024` | false    |
+
 ### Config Command
 
 ```
@@ -96,6 +101,11 @@ This command displays the latency of the bot (where it's hosted) and the API (Di
 
 Reject a submitted suggestion via its suggestion ID (sID) or message ID with an optional response.
 
+| Option          | Description                                   | Example                                                                               | Required |
+|-----------------|-----------------------------------------------|---------------------------------------------------------------------------------------|----------|
+| `suggestion_id` | The sID you wish to reject                    | `/reject suggestion_id:abc123`                                                        | **true** |
+| `response`      | An optional response to add to the suggestion | `/reject suggestion_id:abc123 response:We cannot implement this feature at this time` | false    |
+
 ### Stats Command
 
 ```
@@ -111,3 +121,14 @@ The stats command displays information regarding how many servers the bot is in,
 ```
 
 This command will allow the user to submit a new suggestion that will be sent to the set suggestions channel in the server.
+
+
+| Option        | Description                                                                           | Example                                                                                | Required |
+|---------------|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------|
+| `suggestion`  | Your suggestion                                                                       | `/suggest suggestion:More emotes for Wumpus`                                           | **true** |
+| `image`       | An image to add to your suggestion. _Images currently expire after a couple of weeks_ | `/suggest suggestion:Add this emote image:<attached image>`                            | false    |
+| `anonymously` | Submit your suggestion [anonymously] [1]                                              | `/suggest suggestion:Add a system to directly report staff to admins anonymously:true` | false    |
+
+
+## Footnotes
+- [1]: anonymous-suggestions.mdx "Anonymous Suggestions"
