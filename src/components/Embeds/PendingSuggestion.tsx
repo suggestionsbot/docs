@@ -23,7 +23,7 @@ export default function PendingSuggestion({
           <>
             <DiscordBold>Submitter</DiscordBold>
             <br />
-            {anonymous ? 'Anonymous' : 'anthony#8577'}
+            {anonymous ? 'Anonymous' : 'acollierr17'}
             <br />
             <br />
             <DiscordBold>Suggestion</DiscordBold>
