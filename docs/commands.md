@@ -26,10 +26,11 @@ description: View all the available commands and detailed information of the Sug
 
 These commands require a staff role or the Manage Server (`MANAGE_GUILD`) permission.
 
-| Command |          Description           |                     Guide |
-|---------|:------------------------------:|--------------------------:|
-| approve | Approve a submitted suggestion | [click](#approve-command) |
-| reject  | Reject a submitted suggestion  |  [click](#reject-command) |
+| Command |                       Description                       |                     Guide |
+|---------|:-------------------------------------------------------:|--------------------------:|
+| approve |             Approve a submitted suggestion              | [click](#approve-command) |
+| reject  |              Reject a submitted suggestion              |  [click](#reject-command) |
+| queue   | Get the status of or view the guild's suggestions queue |   [click](#queue-command) |
 
 ## Admin Commands
 
@@ -84,6 +85,21 @@ View or enable/disable if the bot can DM you regarding suggestions (cannot be ov
 ```
 
 The info command displays the bot's authors, description, important links, and the bot version. Some of the most significant information is found here.
+
+### Queue Command
+
+```
+/queue <info|view)
+```
+
+The queue command displays information about the guild's queue (`info`) or displays the queue of suggestions (`view`).
+
+| Option | Description                                           | Example       | Required |
+|--------|-------------------------------------------------------|---------------|----------|
+| `info` | View information about the guild's suggestions' queue | `/queue info` | **true** |
+| `view` | View the guild's suggestions' queue                   | `/queue view` | **true** |
+
+Read more about how you can quality control suggestions in your server via the [queue](queue.md) page.
 
 ### Ping Command
 

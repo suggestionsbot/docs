@@ -31,9 +31,10 @@ export default function SuggestionEmbed(props: EmbedProps): JSX.Element {
         props.anonymous
           ? undefined
           : props.thumbnail
-          ? 'https://cdn.discordapp.com/avatars/158063324699951104/d25a7deec7b308ddf8d4d152808f8058.png?size=1024'
-          : undefined
+            ? 'https://cdn.discordapp.com/avatars/158063324699951104/d25a7deec7b308ddf8d4d152808f8058.png?size=1024'
+            : undefined
       }
+      title={props.title ? props.title : undefined}
       {...authorProps}>
       <DiscordEmbedDescription slot='description'>
         {props.description}

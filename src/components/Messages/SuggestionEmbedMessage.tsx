@@ -36,7 +36,7 @@ export default function SuggestionEmbedMessage(
         ) : (
           options.embed
         )}
-        {options.message?.buttons && (
+        {options.message?.buttons && !options.message.buttonsOverride ? (
           <DiscordAttachments slot='components'>
             <DiscordActionRow>
               <DiscordButton
@@ -49,6 +49,8 @@ export default function SuggestionEmbedMessage(
               />
             </DiscordActionRow>
           </DiscordAttachments>
+        ) : !options.message.buttons ? undefined : (
+          options.message.buttonsOverride
         )}
         {options.message?.thread && (
           <DiscordThread slot='thread' name={options.message.thread.name}>

@@ -40,11 +40,14 @@ export type EmbedProps = {
   displayEmbedAuthor?: boolean;
   anonymous?: boolean;
   displayTimestamp?: boolean;
+  title?: string;
 };
 
 export type MessageProps = {
   ephemeral?: boolean;
   buttons?: boolean;
+  // TODO: make this conditional on the above prop
+  buttonsOverride?: JSX.Element;
   thread?: {
     name: string;
     description: string;
