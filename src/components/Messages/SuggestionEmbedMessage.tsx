@@ -49,7 +49,7 @@ export default function SuggestionEmbedMessage(
               />
             </DiscordActionRow>
           </DiscordAttachments>
-        ) : !options.message.buttons ? undefined : (
+        ) : !options.message?.buttons ? undefined : (
           options.message.buttonsOverride
         )}
         {options.message?.thread && (
