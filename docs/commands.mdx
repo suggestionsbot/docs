@@ -3,6 +3,8 @@ sidebar_position: 2
 title: Commands
 description: View all the available commands and detailed information of the Suggestions bot.
 ---
+import ViewVoters from '@site/src/components/Embeds/ViewVoters';
+import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
 
 ## Key
 | Key                 | Description                                            |
@@ -14,13 +16,14 @@ description: View all the available commands and detailed information of the Sug
 
 ## General Commands
 
-| Command |             Description             |                     Guide |
-|---------|:-----------------------------------:|--------------------------:|
-| dm      |  Enable or disable suggestion DMs   |      [click](#dm-command) |
-| info    |        View bot information         |    [click](#info-command) |
-| ping    | View the latency of the bot and API |    [click](#ping-command) |
-| stats   |         View bot statistics         |   [click](#stats-command) |
-| suggest |       Submit a new suggestion       | [click](#suggest-command) |
+| Command     |              Description              |                         Guide |
+|-------------|:-------------------------------------:|------------------------------:|
+| dm          |   Enable or disable suggestion DMs    |          [click](#dm-command) |
+| info        |         View bot information          |        [click](#info-command) |
+| ping        |  View the latency of the bot and API  |        [click](#ping-command) |
+| stats       |          View bot statistics          |       [click](#stats-command) |
+| suggest     |        Submit a new suggestion        |     [click](#suggest-command) |
+| view voters | View the voters on a given suggestion | [click](#view-voters-command) |
 
 ## Staff Commands
 
@@ -145,7 +148,63 @@ This command will allow the user to submit a new suggestion that will be sent to
 | `image`       | An image to add to your suggestion, if [allowed] [1] in the server. _Images currently expire after a couple of weeks_ | `/suggest suggestion:Add this emote image:<attached image>`                            | false    |
 | `anonymously` | Submit your suggestion [anonymously] [2]                                                                              | `/suggest suggestion:Add a system to directly report staff to admins anonymously:true` | false    |
 
+### View Voters Command
 
-## Footnotes
+```
+/view voters <suggestion_id> [filter]
+```
+
+This command will allow the user to view the voters on a particular suggestion. This command is an extension of being able to do the same thing through the [message context menu] [3] on a suggestion.
+
+| Option          | Description                                | Values                                                     | Example                                                | Required |
+|-----------------|--------------------------------------------|------------------------------------------------------------|--------------------------------------------------------|----------|
+| `suggestion_id` | The suggestion you want to view voters for | N/A                                                        | `/view voters suggestion_id:lrt97z1s`                  | **true** |
+| `filter`        | The voters to view for this suggestion     | - `All voters` <br /> - `Up voters` <br /> - `Down voters` | `/view voters suggestion_id:lrt97z1s filter:Up voters` | false    |
+
+Down below, you'll find different examples of how suggestions are displayed.
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="upvoters" />}
+  message={{
+    command: {
+      name: '/view voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
+
+Running `/view voters suggestion_id:lrt97z1s filter:Up voters` will display all users who have upvoted the suggestion.
+<br />
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="downvoters" />}
+  message={{
+    command: {
+      name: '/view voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
+
+Running `/view voters suggestion_id:lrt97z1s filter:Down voters` will display all users who have downvoted the suggestion.
+<br />
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="all" />}
+  message={{
+    command: {
+      name: '/view voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
+
+Running `/view voters suggestion_id:lrt97z1s filter:All voters` will display all users who have voted for the suggestion, both upvoters and downvoters.
+
+#### Footnotes
 - [1]: configuration#images-in-suggestions "Configuration: Images in Suggestions"
 - [2]: anonymous-suggestions.mdx "Anonymous Suggestions"
+- [3]: context-menu#view-up-voters "Context Menu: View Up voters"
