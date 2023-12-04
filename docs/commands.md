@@ -139,12 +139,13 @@ The stats command displays information regarding how many servers the bot is in,
 This command will allow the user to submit a new suggestion that will be sent to the set suggestions channel in the server.
 
 
-| Option        | Description                                                                           | Example                                                                                | Required |
-|---------------|---------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------|
-| `suggestion`  | Your suggestion                                                                       | `/suggest suggestion:More emotes for Wumpus`                                           | **true** |
-| `image`       | An image to add to your suggestion. _Images currently expire after a couple of weeks_ | `/suggest suggestion:Add this emote image:<attached image>`                            | false    |
-| `anonymously` | Submit your suggestion [anonymously] [1]                                              | `/suggest suggestion:Add a system to directly report staff to admins anonymously:true` | false    |
+| Option        | Description                                                                                                           | Example                                                                                | Required |
+|---------------|-----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------|
+| `suggestion`  | Your suggestion                                                                                                       | `/suggest suggestion:More emotes for Wumpus`                                           | **true** |
+| `image`       | An image to add to your suggestion, if [allowed] [1] in the server. _Images currently expire after a couple of weeks_ | `/suggest suggestion:Add this emote image:<attached image>`                            | false    |
+| `anonymously` | Submit your suggestion [anonymously] [2]                                                                              | `/suggest suggestion:Add a system to directly report staff to admins anonymously:true` | false    |
 
 
 ## Footnotes
-- [1]: anonymous-suggestions.mdx "Anonymous Suggestions"
+- [1]: configuration#images-in-suggestions "Configuration: Images in Suggestions"
+- [2]: anonymous-suggestions.mdx "Anonymous Suggestions"
