@@ -21,13 +21,27 @@ export default function ServerConfiguration(): JSX.Element {
             <br />
             Dm responses: I will DM users on actions such as suggest
             <br />
-            I will create threads for new suggestions
+            Suggestion threads: I will create threads for new suggestions
             <br />
-            Suggestion logs will be kept in your logs channel.
+            Keep Logs: Suggestion logs will be kept in your suggestions channel.
+            <br />
+            Anonymous suggestions: This guild cannot have anonymous suggestions.
+            <br />
+            Automatic thread archiving: I will automatically archive threads
+            created for suggestions.
+            <br />
+            Suggestions queue: In use.
+            <br />
+            Images in suggestions: This guild can have images in suggestions.
+            <br />
+            Anonymous resolutions: Suggesters are shown who resolved their
+            suggestions.
+            <br />
           </span>
         </>
       }
       thumbnail={false}
+      displayEmbedAuthor
     />
   );
 }
