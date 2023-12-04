@@ -25,7 +25,7 @@ To enable the suggestions queue, run `/config suggestion_queue enable`.  You can
 - [`/queue view`](#queue-view)
 
 ## Queue Info
-The [`/queue info`](commands.md#queue-command) command will display the status of your server's suggestions queue.
+The [`/queue info`](commands#queue-command) command will display the status of your server's suggestions queue.
 
 You can check if new suggestions go to the queue and see how many are there.
 <QueueInfo />
@@ -33,7 +33,7 @@ You can check if new suggestions go to the queue and see how many are there.
 The above example displays that the server has the suggestions queue enabled and that there's currently `1` suggestion in the queue.
 
 ## Queue View
-The [`/queue view`](commands.md#queue-command) command will display active suggestions in the queue. You can cycle through the queue and approve/reject suggestions.
+The [`/queue view`](commands#queue-command) command will display active suggestions in the queue. You can cycle through the queue and approve/reject suggestions.
 <QueueView />
 
 
