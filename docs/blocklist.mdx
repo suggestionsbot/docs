@@ -1,0 +1,40 @@
+---
+sidebar_position: 9
+title: Blocklist
+description: Block malicious users and bad actors from submitting suggestions on your server.
+---
+import SuggestionSlashReply from '@site/src/components/Messages/SuggestionSlashReply.tsx'
+import ErrorEmbed from '@site/src/components/Embeds/ErrorEmbed';
+
+Unfortunately, some people come through your community with only evil intentions. They find ways to cause a nuisance and be as disruptive as possible. Discord bots like Suggestions are no exception to bot abuse.
+
+However, with the introduction of our blocklist feature, we aim to mitigate this issue and put power back into the hands of the great communities that use our bot. Learn more about it below!
+
+## Purpose
+This feature gives administrators the ability to block certain users from being able to submit suggestions in an easy-to-use fashion via `/user blocklist add suggestion_id:<suggestion_id>`. It pulls the suggestion author and blocks them from creating new suggestions.
+
+## Usage
+To add a new user to the server's blocklist, run `/user blocklist add suggestion_id:<suggestion_id>`. Ensure you have the suggestion ID handy, or get it from the list when typing the command. The bot will automatically block the author of the suggestion from creating new suggestions.
+
+<SuggestionSlashReply command="/user blocklist add" message="I have added that user to the blocklist. They will be unable to create suggestions in the future." />
+
+If you need to unblock this user, run `/user blocklist remove` and pass either the `suggestion_id` option with the suggestion ID or the `user_id` option with the user ID of the person you wish to unblock.
+```
+/user blocklist remove suggestion_id:lrt97z1s
+/user blocklist remove user_id:158063324699951104
+```
+
+<SuggestionSlashReply command="/user blocklist remove" message="I have un-blocklisted that user for you." />
+
+## How it works
+When the blocklisted user attempts to submit a new suggestion, they will receive the error code [`22`](errors#blocklisted-user), and the bot will cancel the suggestion submission.
+
+<ErrorEmbed
+  title="Blocked Action"
+  description={
+    <>
+      Administrators from this guild have removed your ability to run this action.
+    </>
+  }
+  code={22}
+/>

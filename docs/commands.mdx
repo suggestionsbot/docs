@@ -39,9 +39,11 @@ These commands require a staff role or the Manage Server (`MANAGE_GUILD`) permis
 
 These commands require the Manage Server (`MANAGE_GUILD`) permission.
 
-| Command |                        Description                        |                    Guide |
-|---------|:---------------------------------------------------------:|-------------------------:|
-| config  | View and update various configuration settings of the bot | [click](#config-command) |
+| Command               |                        Description                        |                                   Guide |
+|-----------------------|:---------------------------------------------------------:|----------------------------------------:|
+| config                | View and update various configuration settings of the bot |                [click](#config-command) |
+| user blocklist add    |       Remove a users ability to create suggestions        |    [click](#user-blocklist-add-command) |
+| user blocklist remove |       Re-add a users ability to create suggestions        | [click](#user-blocklist-remove-command) |
 
 ## Command Information
 
@@ -204,7 +206,29 @@ Running `/view voters suggestion_id:lrt97z1s filter:Down voters` will display al
 
 Running `/view voters suggestion_id:lrt97z1s filter:All voters` will display all users who have voted for the suggestion, both upvoters and downvoters.
 
+### User Blocklist Add Command
+
+```
+/user blocklist add <suggestion_id>
+```
+
+This command will allow an administrator to block a specific user from submitting new suggestions. It takes the suggestion ID as input. Read more information on how this works [here] [4].
+
+### User Blocklist Remove Command
+
+```
+/user blocklist remove [suggestion_id|user_id]
+```
+
+This command will allow an administrator to remove a specific user from the suggestion submission blocklist. It takes either a user ID or a suggestion ID as input. Read more information on how this works [here] [4].
+
+| Option          | Description                              | Example                                             | Required |
+|-----------------|------------------------------------------|-----------------------------------------------------|----------|
+| `suggestion_id` | The suggestions ID you wish to reference | `/user blocklist remove suggestion_id:lrt97z1s`     | false    |
+| `user_id`       | The users discord id                     | `/user blocklist remove user_id:158063324699951104` | false    |
+
 #### Footnotes
 - [1]: configuration#images-in-suggestions "Configuration: Images in Suggestions"
 - [2]: anonymous-suggestions.mdx "Anonymous Suggestions"
 - [3]: context-menu#view-up-voters "Context Menu: View Up voters"
+- [4]: blocklist "Suggestions Blocklist"
