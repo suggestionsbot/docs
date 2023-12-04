@@ -7,10 +7,10 @@ description: Look at past non-technical changes made to the documentation.
 Review previous changelogs in regard to newly added bot features and when they were documented on the website.
 
 :::info
-Only changelogs newer than _December 3, 2023_, are documented.
+Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
-## `December 3, 2023`
+## `December 4, 2023`
 
 ### Documented Changes
 - Suggestion queue via the `/queue` command (v3.12)
