@@ -7,6 +7,7 @@ import SuggestionEmbed from './SuggestionEmbed';
 type EmbedProps = {
   status: 'pending' | 'approved' | 'rejected';
   response?: boolean;
+  anonymousModerator?: boolean;
 };
 
 const EmbedStatus: Record<SuggestionStatus, EmbedColor> = {
@@ -18,6 +19,7 @@ const EmbedStatus: Record<SuggestionStatus, EmbedColor> = {
 export default function SuggestionConfirmation({
   status,
   response,
+  anonymousModerator,
 }: EmbedProps): JSX.Element {
   return (
     <SuggestionEmbed
@@ -44,8 +46,13 @@ export default function SuggestionConfirmation({
           {['approved', 'rejected'].includes(status) && (
             <>
               Hey, <DiscordMention type='user'>anthony</DiscordMention>. Your
-              suggestion has been {status} by{' '}
-              <DiscordMention type='user'>anthony</DiscordMention>!
+              suggestion has been {status}
+              {anonymousModerator ? (
+                ''
+              ) : (
+                <DiscordMention type='user'>anthony</DiscordMention>
+              )}
+              {''}!
               <br />
               <br />
               {response && (

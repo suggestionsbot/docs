@@ -38,7 +38,8 @@ export type EmbedProps = {
   footer?: JSX.Element;
   thumbnail?: boolean;
   displayEmbedAuthor?: boolean;
-  anonymous?: boolean;
+  anonymousAuthor?: boolean;
+  anonymousModerator?: boolean;
   displayTimestamp?: boolean;
   title?: string;
 };

@@ -7,6 +7,7 @@ import SuggestionSlashReply from '@site/src/components/Messages/SuggestionSlashR
 import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
 import PendingSuggestion from '@site/src/components/Embeds/PendingSuggestion';
 import SuggestionStatusEmbed from '@site/src/components/Embeds/SuggestionStatusEmbed';
+import SuggestionConfirmation from '@site/src/components/Embeds/SuggestionConfirmation';
 
 As a community owner, there are times when you want to allow your community to give feedback but do so in an anonymous fashion. We now allow server owners and admins to harness that power by enabling anonymous suggestions in their servers.
 
@@ -31,11 +32,11 @@ Once enabled, all the user has to when submitting their suggestion is set the `a
 The suggestion is submitted normally. However, any identifying information such as the profile icon and user ID is removed from the suggestion.
 
 <SuggestionEmbedMessage
-  embed={<PendingSuggestion anonymous />}
+  embed={<PendingSuggestion anonymousAuthor />}
   message={{
     buttons: true
   }}
-  anonymous
+  anonymousAuthor
 />
 
 ## Managing Suggestions
@@ -43,9 +44,37 @@ The suggestion is submitted normally. However, any identifying information such 
 When approving or rejecting suggestions, everything is the same as explained over in the [Managing Suggestions](/managing-suggestions.mdx) section. However, once again, the user's profile information is omitted from the suggestion.
 
 <SuggestionEmbedMessage
-  embed={<SuggestionStatusEmbed status="approved" anonymous />}
-  anonymous
+  embed={<SuggestionStatusEmbed status="approved" anonymousAuthor />}
+  anonymousAuthor
 />
+
+## Anonymous Resolutions
+Anonymity is an integral part of many communities here on Discord; it's why we've also extended the anonymity of suggestions to the resolution process.
+
+By enabling anonymous resolutions, you protect your staff member's identities when approving and rejecting suggestions.
+
+To utilize this feature today, run `/config anonymous_resolutions enable`.
+
+<SuggestionSlashReply command="/config anonymous_resolutions enable" message="All further suggestions will not show the moderator who resolved them." />
+
+With it enabled, the process runs similarly to everything above. In this case, the moderator who resolved the suggestion is automatically marked anonymous upon resolution. Not only does this apply to the suggestion message itself, but the DM sent to the author as well.
+
+<SuggestionEmbedMessage
+  embed={<SuggestionStatusEmbed status="rejected" anonymousModerator anonymousAuthor response />}
+/>
+The above example has both the author and moderator anonymous.
+<br/> <br/>
+
+<SuggestionEmbedMessage
+  embed={<SuggestionConfirmation status="rejected" anonymousModerator />}
+/>
+The above example has the moderator who rejected the suggestion removed from the DM sent to the submitter.
+<br/> <br/>
+
+<SuggestionEmbedMessage
+  embed={<SuggestionConfirmation status="rejected" anonymousModerator response />}
+/>
+It also works when the moderator responds.
 
 ## More Information
 
