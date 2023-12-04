@@ -38,13 +38,17 @@ export type EmbedProps = {
   footer?: JSX.Element;
   thumbnail?: boolean;
   displayEmbedAuthor?: boolean;
-  anonymous?: boolean;
+  anonymousAuthor?: boolean;
+  anonymousModerator?: boolean;
   displayTimestamp?: boolean;
+  title?: string;
 };
 
 export type MessageProps = {
   ephemeral?: boolean;
   buttons?: boolean;
+  // TODO: make this conditional on the above prop
+  buttonsOverride?: JSX.Element;
   thread?: {
     name: string;
     description: string;

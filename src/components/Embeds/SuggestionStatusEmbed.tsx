@@ -11,7 +11,8 @@ import SuggestionEmbed from './SuggestionEmbed';
 type EmbedProps = {
   response: boolean;
   status: 'approved' | 'rejected';
-  anonymous?: boolean;
+  anonymousAuthor?: boolean;
+  anonymousModerator?: boolean;
 };
 
 export default function SuggestionStatusEmbed(
@@ -42,7 +43,7 @@ export default function SuggestionStatusEmbed(
           <br />
           <DiscordBold>Submitter</DiscordBold>
           <br />
-          {options.anonymous ? (
+          {options.anonymousAuthor ? (
             'Anonymous'
           ) : (
             <DiscordMention type='user'>anthony</DiscordMention>
@@ -53,7 +54,11 @@ export default function SuggestionStatusEmbed(
             {options.status === 'approved' ? 'Approved' : 'Rejected'} By
           </DiscordBold>
           <br />
-          <DiscordMention type='user'>anthony</DiscordMention>
+          {options.anonymousModerator ? (
+            'Anonymous'
+          ) : (
+            <DiscordMention type='user'>anthony</DiscordMention>
+          )}
           <br />
           <br />
           {options.response && (
