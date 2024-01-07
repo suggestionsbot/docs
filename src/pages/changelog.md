@@ -10,6 +10,27 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
+## `January 4, 2024`
+
+### Documented Changes
+- No documented changes. Primarily internal features
+
+### Minor Changes
+- No changes. Primarily internal features
+
+### Bug Fixes
+- Voters should no longer display on [cleared](../../docs/commands#clear-command) suggestions (v3.20)
+
+### Technical Changes
+
+#### Documentation
+- No technical changes
+
+#### Bot
+- The bot runs behind a gateway proxy for zero downtime deployments (reverted as of [`c5727a6`](https://github.com/suggestionsbot/suggestions-bot/commit/c5727a6658c8f2dd5f1daf631fb9cd7e2a75bf1f))
+- The ability to expose further information via our API
+- The shard count is now **5** shards per cluster with a total of **14** clusters
+
 ## `December 4, 2023`
 
 ### Documented Changes
@@ -22,7 +43,15 @@ Only changelogs newer than _December 4, 2023_, are documented.
 ### Minor Changes
 - Improved rendered embeds and other Discord React componenents
 
+### Bug Fixes
+- To many to address in this one changelog
+
 ### Technical Changes
+
+### Documentation
 - Upgraded repo Yarn to `v3.9.4`
 - Upgraded repo to Node `v18.12.1`
 - Upgade all other repo dependencies to latest major sem versions (holding off on Docusaurus v3)
+
+### Bot
+- General infrastructure and codebase refactoring and changes. Too much to properly document on this page
