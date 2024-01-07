@@ -61,11 +61,6 @@ const config = {
             label: 'Get Started',
           },
           {
-            to: 'coming-soon',
-            label: 'Coming Soon',
-            position: 'left',
-          },
-          {
             to: 'changelog',
             label: 'Changelog',
             position: 'left'

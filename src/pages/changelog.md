@@ -13,13 +13,13 @@ Only changelogs newer than _December 4, 2023_, are documented.
 ## `January 4, 2024`
 
 ### Documented Changes
-- Add missing documentation for the [`/clear`](../../docs/commands#clear-command) command (v3.2)
+- Add missing documentation for the [`/clear`](../../docs/commands#clear-command) command ([v3.2](https://github.com/suggestionsbot/suggestions-bot/issues/1))
 
 ### Minor Changes
-- No changes. Primarily internal features
+- Remove the `/coming-soon` route as the bot is stable and has nearly all features from the previous JavaScript version
 
 ### Bug Fixes
-- Voters should no longer display on cleared suggestions (v3.20)
+- Voters should no longer display on cleared suggestions ([v3.20](https://github.com/suggestionsbot/suggestions-bot/pull/70/))
 
 ### Technical Changes
 
