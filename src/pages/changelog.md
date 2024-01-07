@@ -13,13 +13,13 @@ Only changelogs newer than _December 4, 2023_, are documented.
 ## `January 4, 2024`
 
 ### Documented Changes
-- No documented changes. Primarily internal features
+- Add missing documentation for the [`/clear`](../../docs/commands#clear-command) command (v3.2)
 
 ### Minor Changes
 - No changes. Primarily internal features
 
 ### Bug Fixes
-- Voters should no longer display on [cleared](../../docs/commands#clear-command) suggestions (v3.20)
+- Voters should no longer display on cleared suggestions (v3.20)
 
 ### Technical Changes
 

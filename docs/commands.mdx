@@ -34,6 +34,7 @@ These commands require a staff role or the Manage Server (`MANAGE_GUILD`) permis
 | approve |             Approve a submitted suggestion              | [click](#approve-command) |
 | reject  |              Reject a submitted suggestion              |  [click](#reject-command) |
 | queue   | Get the status of or view the guild's suggestions queue |   [click](#queue-command) |
+| clear| Remove a suggestion and any associated messages | [click](#clear-command) |
 
 ## Admin Commands
 
@@ -74,6 +75,19 @@ View and update various configuration settings of the bot.
 - You can update a specific setting by running `/config <setting> <value>`
 
 Read more about configuring the bot via the [configuration](configuration.mdx) page.
+
+### Clear Command
+
+```
+/clear <suggestion_id> [response]
+```
+
+If you need to remove a duplicate or bugged suggestion, you may use the `/clear` command to remove the suggestion and any associated messages in a channel. You may read more about it [here] [5].
+
+| Option          | Description                                   | Example                                                                      | Required |
+|-----------------|-----------------------------------------------|------------------------------------------------------------------------------|----------|
+| `suggestion_id` | The sID you wish to clear                     | `/clear suggestion_id:lrt97z1s`                                              | **true** |
+| `response`      | An optional response to add to the suggestion | `/clear suggestion_id:lrt97z1s response:This is duplicate to your last one.` | false    |
 
 ### DM Command
 
@@ -231,3 +245,4 @@ This command will allow an administrator to remove a specific user from the sugg
 [2]: anonymous-suggestions "Anonymous Suggestions"
 [3]: context-menu#view-up-voters "Context Menu: View Up Voters"
 [4]: blocklist "Suggestions Blocklist"
+[5]: managing-suggestions#clearing-suggestions "Clearing Suggestions"

@@ -3,10 +3,13 @@ sidebar_position: 4
 title: Managing Suggestions
 description: Use the easy but powerful suggestion management to stay organized in your Discord.
 ---
+import { DiscordInlineCode } from '@skyra/discord-components-react';
+
 import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
 import PendingSuggestion from '@site/src/components/Embeds/PendingSuggestion';
 import SuggestionConfirmation from '@site/src/components/Embeds/SuggestionConfirmation';
 import SuggestionStatusEmbed from '@site/src/components/Embeds/SuggestionStatusEmbed';
+import SuggestionSlashReply from '@site/src/components/Messages/SuggestionSlashReply'
 
 ## Key
 | Key                 | Description                                            |
@@ -126,3 +129,17 @@ If you wish to set up the suggestion logs channel, you may refer to the steps be
 2. Add the bot to your newly created channel and give it the **Send Messages** permission.
 3. Add additional permissions depending on what the bot has assigned in your server.
 4. Disable **Send Messages** and **Add Reactions** for `@everyone` to only allow the bot to send messages and to prevent unnecessary message reactions.
+
+## Clearing Suggestions
+
+There may be a time when you have a duplicate or bugged suggestion. In this instance, the suggestion message may clog up your channel, or the suggestion ID may clog up auto-complete.
+
+Due to this issue, we introduced the [`/clear`](commands#clear-command) command to help manage these suggestions. Provide the suggestion ID or select it from auto-complete to execute the command.
+
+<SuggestionSlashReply command="/clear" message={
+  <>
+    I have cleared <DiscordInlineCode>lrt97z1s</DiscordInlineCode> for you.
+  </>
+} />
+
+Optionally, a response note on why it was cleared may be added to the suggestion via the `response` option. At this time, this response is internal and can't be viewed.
