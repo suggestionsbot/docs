@@ -48,10 +48,10 @@ Only changelogs newer than _December 4, 2023_, are documented.
 
 ### Technical Changes
 
-### Documentation
+#### Documentation
 - Upgraded repo Yarn to `v3.9.4`
 - Upgraded repo to Node `v18.12.1`
 - Upgade all other repo dependencies to latest major sem versions (holding off on Docusaurus v3)
 
-### Bot
+#### Bot
 - General infrastructure and codebase refactoring and changes. Too much to properly document on this page
