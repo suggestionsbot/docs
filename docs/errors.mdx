@@ -32,7 +32,9 @@ import { DiscordInlineCode } from '@skyra/discord-components-react';
 | 20   | QUEUE_IMBALANCE                                  | [click](#queue-imbalance)                                 |
 | 21   | MISSING_QUEUE_CHANNEL                            | [click](#missing-queue-channel)                           |
 | 22   | BLOCKLISTED_USER                                 | [click](#blocklisted-user)                                |
-
+| 23   | MISSING_QUEUE_LOG_CHANNEL                        | [click](#missing-queue-log-channel)                       |
+| 24   | MISSING_PERMISSIONS_IN_QUEUE_CHANNEL             | [click](#missing-permissions-in-queue-channel)            |
+| 25   | INVALID_FILE_TYPE                                | [click](#invalid-file-type)                               |
 ## Error Information
 
 ### Suggestion Message Deleted
@@ -273,3 +275,45 @@ but you have been blocked by an administrator within the guild.
         </>
     }
     code={22} />
+
+### Missing Queue Log Channel
+
+This error is thrown when there is no configured channel to log queued suggesitons. This happens when suggestion queueing is enabled and a new suggestion or rejected suggestion is trying to be sent to the queue log channel.
+<ErrorEmbed
+  title="Missing Queue Logs Channel"
+  description={
+    <>
+      This command requires a queue log channel to use.
+      <br/><br/>
+      Please contact an administrator and ask them to set one up using the following command.
+      <br/><br/>
+      <DiscordInlineCode>/config queue_channel</DiscordInlineCode>
+    </>
+  }
+  code={23} />
+
+### Missing Permissions In Queue Channel
+
+This error is thrown when trying to send a new queued suggestion to the queue channel, but the bot lacks the required permissions in the channel.
+<ErrorEmbed
+  title="Missing permissions within queue logs channel"
+  description={
+    <>
+      The bot does not have the required permissions in your queue channel. Please contact an administrator and ask them to fix this.
+    </>
+  }
+  code={24} />
+
+### Invalid File Type
+
+This error is thrown when uploading an invalid image file type on a suggestion.
+<ErrorEmbed
+  title="Invalid file type"
+  description={
+    <>
+      The file you attempted to upload is not an accepted type.
+      <br/><br/>
+      If you believe this is an error please reach out to us via our support discord.
+    </>
+  }
+  code={25} />
