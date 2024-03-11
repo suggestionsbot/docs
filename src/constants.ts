@@ -58,6 +58,11 @@ export type MessageProps = {
   };
 };
 
+export type SuggestionEmbedMessageProps = {
+  message?: MessageProps;
+  embed?: EmbedProps | JSX.Element;
+};
+
 export type ErrorEmbedProps = {
   title: string;
   description: string | JSX.Element;

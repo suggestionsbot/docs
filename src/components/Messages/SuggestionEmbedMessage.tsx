@@ -9,13 +9,8 @@ import {
   DiscordCommand,
 } from '@skyra/discord-components-react';
 
-import { EmbedProps, MessageProps } from '../../constants';
+import { SuggestionEmbedMessageProps } from '../../constants';
 import SuggestionEmbed from '../Embeds/SuggestionEmbed';
-
-type SuggestionEmbedMessageProps = {
-  message?: MessageProps;
-  embed?: EmbedProps | JSX.Element;
-};
 
 export default function SuggestionEmbedMessage(
   options: SuggestionEmbedMessageProps,
