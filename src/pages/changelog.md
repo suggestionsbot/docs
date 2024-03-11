@@ -10,6 +10,25 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
+## `March 10, 2024`
+
+### Documented Changes
+- TBD
+
+### Minor Changes
+- TBD
+
+### Bug Fixes
+- TBD
+
+### Technical Changes
+
+#### Documentation
+- TBD
+
+#### Bot
+- TBD
+
 ## `January 4, 2024`
 
 ### Documented Changes
