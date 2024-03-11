@@ -13,21 +13,23 @@ Only changelogs newer than _December 4, 2023_, are documented.
 ## `March 10, 2024`
 
 ### Documented Changes
-- TBD
+- Ability to configure suggestions channel queue ([`acff1c1`](https://github.com/suggestionsbot/suggestions-bot/pull/75/commits/acff1c12711b4d16a932549a95d12d5c0724bfdc))
 
 ### Minor Changes
-- TBD
+- `pt_BR` translations ([`79a0be9`](https://github.com/suggestionsbot/suggestions-bot/pull/75/commits/79a0be99eaaea785b20ae0380adcd41b761b926f))
 
 ### Bug Fixes
-- TBD
+- Fix information disclosures in commands using the wrong value for the command author ([`5840093`](https://github.com/suggestionsbot/suggestions-bot/pull/75/commits/584009376f51621e524521ab8ef971a25de70698))
+- Fix images 404'ing after 2 weeks ([`d38a3c7`](https://github.com/suggestionsbot/suggestions-bot/pull/75/commits/d38a3c7a22cc91e77d4c827dd363a111e8f89e24))
 
 ### Technical Changes
 
 #### Documentation
-- TBD
+- No technical changes, but maybe upgrading to a v4 alpha version of [skyra-components](https://github.com/skyra-project/discord-components/blob/main/packages/core/UPGRADING-TO-V4.md) soon if a public release isn't available by then
 
 #### Bot
-- TBD
+- Moved to centralised logging ([`e083d20`](https://github.com/suggestionsbot/suggestions-bot/pull/75/commits/e083d20492d7c8c258f5d5664f029de1339cd794))
+- Added internal helper classes ([`cee879e`](https://github.com/suggestionsbot/suggestions-bot/pull/75/commits/cee879ebde7c7cb325e64095fa7a128f92f672f2))
 
 ## `January 4, 2024`
 
