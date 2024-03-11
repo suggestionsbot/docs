@@ -37,6 +37,16 @@ export default function ServerConfiguration(): JSX.Element {
             Anonymous resolutions: Suggesters are shown who resolved their
             suggestions.
             <br />
+            Using channel queue: This guild uses a channel based suggestions
+            queue.
+            <br />
+            Queue channel:{' '}
+            <DiscordMention type='channel'>suggestion-queue</DiscordMention>
+            <br />
+            Queue rejection channel:{' '}
+            <DiscordMention type='channel'>
+              suggestion-queue-logs
+            </DiscordMention>
           </span>
         </>
       }

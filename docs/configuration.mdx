@@ -3,6 +3,8 @@ sidebar_position: 3
 title: Configuration
 description: Learn how to configure various aspects of the Suggestions bot.
 ---
+import QueuedSuggestionEmbedMessage
+  from '@site/src/components/Messages/QueuedSuggestionEmbedMessage';
 import ServerConfiguration from '@site/src/components/Embeds/ServerConfiguration';
 import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
 import SuggestionThreadMessage from '@site/src/components/Messages/SuggestionThreadMessage';
@@ -81,21 +83,57 @@ When enabled, this configuration allows a suggestion to remain in the channel wh
 
 ## Anonymous Suggestions
 
-Usage `/config get config:Anonymous suggestions` (to view) or `/config anonymous <enable|disable>`
+Usage `/config get config:Anonymous suggestions` (to view) or `/config anonymous <enable|disable>` (to set)
 
 When enabled, this configuration allows users to optionally submit a suggestion as anonymous, omitting any of their profile infomation from the suggestion. Read more about this feature [here](anonymous-suggestions.mdx).
 
 ## Auto Archive Threads
 When enabled, this configuration allows the bot to automatically archive suggestions threads when resolved (approved or rejected).
 
-Usage `/config get config:Auto archive threads` (to view) or `/config auto_archive_threads <enable|disable>`
+Usage `/config get config:Auto archive threads` (to view) or `/config auto_archive_threads <enable|disable>` (to set)
 
 ## Images In Suggestions
+
 By default, users can attach images to new suggestions. If disabled, submitters will receive a warning that they cannot add images as a Discord attachment.
 
-Usage `/config get config:Images in suggestions` (to view) or `/config images_in_suggestions <enable|disable>`
+Usage `/config get config:Images in suggestions` (to view) or `/config images_in_suggestions <enable|disable>` (to set)
 
 ## Anonymous Resolutions
+
 By default, the suggestion displays the staff member who resolved it when approved or rejected. If disabled, "Anonymous" will replace their name. Read more about this feature [here](anonymous-suggestions.mdx#anonymous-resolutions).
 
-Usage `/config get config:Anonymous resolutions` (to view) or `/config anonymous_resolutions <enable|disable>`
+Usage `/config get config:Anonymous resolutions` (to view) or `/config anonymous_resolutions <enable|disable>` (to set)
+
+## Suggestion Queue
+
+When enabled, all new suggestions are sent to either a virtual or channel queue for approval. Once a suggestion is approved, it is sent to the set suggestions channel for the public to vote on.
+
+Usage `/config get config:Suggestions queue` (to view) or `/config suggestion_queue <enable|disable>` (to set)
+
+Read more about the suggestion queue [here](queue).
+
+## Queue Channel
+
+You can view or set the channel where queued suggestions will be posted. You can choose from a list of text channels in your server. To use this channel, you must enable the queue channel.
+
+Usage: `/config get config:Queue channel` (to view) or `/config queue_channel <channel>` (to set)
+
+<QueuedSuggestionEmbedMessage />
+
+Read more about the suggestion queue [here](queue#channel-queue).
+
+## Queue Log Channel
+
+You can view, set, or remove the channel where rejected suggestions in the queue are sent. You can choose from a list of text channels in your server. This channel can be unset by omitting the `channel:<channel>` option.
+
+Usage `/config get config:Queue rejection channel` (to view) or `/config queue_log_channel [channel:<channel>]` (to set)
+
+Read more about the suggestion queue [here](queue#channel-queue).
+
+## Use Channel Queue
+
+This configuration will post queued suggestions to the set suggestions queue channel when enabled. For this to work, you must have a queue channel set with proper permissions. When disabled, you can access a virtual queue with the `/queue view` command.
+
+Usage: `/config get config:Using channel queue` (to view) or `/config use_channel_queue <enable|disable>` (to set)
+
+Read more about the suggestion queue [here](queue#channel-queue).

@@ -5,7 +5,7 @@ if (ExecutionEnvironment.canUseDOM) {
     profiles: {
       suggestions: {
         author: 'Suggestions',
-        avatar: 'https://cdn.discordapp.com/avatars/474051954998509571/4be94ad8814f59502586974ee31efd21.png?size=4096',
+        avatar: 'https://cdn.discordapp.com/avatars/474051954998509571/a_9284248445d77d12be8256ebcc88948e.gif?size=1024',
         bot: true,
         verified: true,
         roleColor: '#ffd663',

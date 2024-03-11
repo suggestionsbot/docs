@@ -3,6 +3,8 @@ sidebar_position: 8
 title: Suggestion Queue
 description: Learn how to utilize the suggestion queue to manage the flow of suggestions to the public.
 ---
+import SuggestionSlashReply
+  from '../src/components/Messages/SuggestionSlashReply';import QueuedSuggestionEmbedMessage from '@site/src/components/Messages/QueuedSuggestionEmbedMessage';
 import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
 import QueueInfo from '@site/src/components/Embeds/QueueCommand/QueueInfo.tsx'
 import QueueView from '@site/src/components/Embeds/QueueCommand/QueueView.tsx'
@@ -16,15 +18,36 @@ The suggestion queue is one of our most powerful features on the bot. By putting
 Improve the quality of your community by moderating its suggestions. Learn more about it below.
 
 ## Purpose
-This feature will send all suggestions made via `/suggest` to a queue, after which a moderator for your server can approve or reject suggestions before the public views them in your suggestions channel for voting.
+This feature will send all suggestions made via `/suggest` to a queue, after which a moderator for your server can approve or reject suggestions before the public views them in your suggestions channel for voting. The queue can managed and interacted with virtually or through a text channel in your server. Additionally, you may set a logs channel for rejected suggestions from the queue to be accounted for.
 
 ## Usage
-To enable the suggestions queue, run `/config suggestion_queue enable`.  You can then use the following commands to manage your queue:
+To enable the suggestions queue, run `/config suggestion_queue enable`.  From here, you may manage the queue in one of two ways:
+- [Virtual Queue](#virtual-queue)
+- [Channel Queue](#channel-queue)
+
+<SuggestionSlashReply command="/suggest" message="Your suggestion has been sent to the queue for processing." />
+
+### Anonymous Suggestions
+If enabled in your guild, when users submit suggestions anonymously, their user information remains anonymous during the queue process for continued privacy practices in your community.
+
+<QueuedSuggestionEmbedMessage embed={{ anonymousAuthor: true }} />
+
+## Queue Logs Channel
+Whether you choose to set up a virtual or channel queue, you can log rejected suggestions to a set channel. The channel can be unset using the same command, disabling the logging of rejected suggestions.
+- [`/config queue_logs_channel channel:<channel>`](#channel-queue) (to set the queue logs channel)
+- [`/config queue_logs_channel`](#channel-queue) (to unset the queue logs channel)
+
+## Virtual Queue
+When using the virtual queue, you'll be able to interact with the queue using the following commands:
 
 - [`/queue info`](#queue-info)
 - [`/queue view`](#queue-view)
 
-## Queue Info
+In this mode, queued suggestions do not have a channel presence. The only time suggestions are sent to a channel is when they are approved or rejected.
+
+### Commands
+
+#### Queue Info
 The [`/queue info`](commands#queue-command) command will display the status of your server's suggestions queue.
 
 You can check if new suggestions go to the queue and see how many are there.
@@ -32,7 +55,7 @@ You can check if new suggestions go to the queue and see how many are there.
 
 The above example displays that the server has the suggestions queue enabled and that there's currently `1` suggestion in the queue.
 
-## Queue View
+#### Queue View
 The [`/queue view`](commands#queue-command) command will display active suggestions in the queue. You can cycle through the queue and approve/reject suggestions.
 <QueueView />
 
@@ -74,3 +97,21 @@ You'll receive this message in the channel when rejecting the selected queued su
   embed={<QueueRejection />}
 />
 The bot will also attempt to DM the user this message.
+
+#### Rejection Logging
+You may optionally send rejected suggestions in the suggestion queue to a separate logs channel for moderation/auditing purposes. The commands are in the [Queue Logs Channel](#queue-logs-channel) section.
+
+As you can see above, if the suggestion wasn't submitted anonymously, you'll notice the content and the submitter's information.
+
+## Channel Queue
+When the physical queue is enabled, it works similarly to the [`/queue view`](#queue-view) command. However, each queued suggestion is posted similarly to a suggestion submitted to the virtual queue, with the difference being the buttons assigned.
+
+<QueuedSuggestionEmbedMessage />
+
+Each button has a different action, which functions similarly to the virtual queue.
+
+### Approving a suggestion
+Approving a suggestion in the channel queue is virtually (no pun intended) the same as approving it from the virtual queue.
+
+### Rejecting a suggestion
+Rejecting a suggestion in the channel queue is the same as rejecting a suggestion from the virtual queue. If you have the log channel enabled for rejected suggestions in the queue, rejected suggestions will be logged in the queue logs channel.
