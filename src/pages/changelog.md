@@ -10,7 +10,33 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
-## `March 10, 2024`
+## `March 29, 2024` - Version 3.23
+
+### New features
+
+- Suggestions support newline characters (`\n`) allowing for better suggestion formatting
+- The bot will ping the suggestions author in newly created suggestions threads
+
+### Bug fixes
+
+- Fixed a condition where resolving a suggestion when the bot was missing log channel permissions would result in the suggestion disappearing
+- Fixed the CDN including an extra `.` in image urls
+
+### Technical changes
+
+#### Bot
+
+- Reduced the amount of API requests required to delete messages
+- Moved functionality from our Disnake fork into the bot 
+- Updated Zonis to the next major version
+- More metadata in certain log messages
+- Removed some unused methods
+
+#### Garven
+
+- Updated Zonis to the next major version
+
+## `March 10, 2024` - Version 3.22
 
 ### Documented Changes
 - Ability to configure suggestions channel queue ([`acff1c1`](https://github.com/suggestionsbot/suggestions-bot/pull/75/commits/acff1c12711b4d16a932549a95d12d5c0724bfdc))
