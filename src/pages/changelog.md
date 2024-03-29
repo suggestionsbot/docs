@@ -31,6 +31,7 @@ Only changelogs newer than _December 4, 2023_, are documented.
 - Updated Zonis to the next major version
 - More metadata in certain log messages
 - Removed some unused methods
+- All unhandled errors are pushed into our logging pipeline so we can catch and fix them easier
 
 #### Garven
 
