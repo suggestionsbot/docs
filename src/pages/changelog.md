@@ -10,6 +10,29 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
+## `May 26, 2024` - Version 3.24
+
+### Changes / Features
+
+- Added German translations
+- More Portuguese translations
+- Users can now add notes to suggestions
+- Users can toggle on and off the ability to be pinged in new suggestion threads of theirs
+- Guilds can toggle pings for this as well
+- Queued suggestions can be approved and rejected using /approve and /reject
+    - Users can add notes to these as well. On approval this note is set as the new suggestions note, on rejection this is added to the rejection embed
+
+### Bug fixes
+
+- Fixed the blocklist remove command without arguments
+- Fixed some errors happening silently in buttons
+
+### Technical changes
+
+- Bumped our logging library for some bug fixes
+- Modified logging levels to reduce log fatigue
+- Removed some background debug logging
+
 ## `March 29, 2024` - Version 3.23
 
 ### New features
