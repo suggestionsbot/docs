@@ -26,6 +26,7 @@ Only changelogs newer than _December 4, 2023_, are documented.
 
 - Fixed the blocklist remove command without arguments
 - Fixed some errors happening silently in buttons
+- Queued suggestions turn red upon rejection
 
 ### Technical changes
 
