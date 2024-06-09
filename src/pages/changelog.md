@@ -10,7 +10,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
-## `May 26, 2024` - Version 3.24
+## `June 9th, 2024` - Version 3.24
 
 ### Changes / Features
 
