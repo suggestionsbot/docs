@@ -10,6 +10,24 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
+## `June 13th, 2024` - Version 3.25
+
+### Changes / Features
+
+- Support `\n` in notes
+- Add moderator notes to resolved suggestions
+- When suggestion content length is exceeded, return the suggestion text to user
+
+### Bug fixes
+
+-  Fixed some errors with suggestions being incomplete server side
+
+### Technical changes
+
+- Fully removed our need to fork `disnake`
+- Fully removed our need to use `bot base`
+- More internal logging
+
 ## `June 9th, 2024` - Version 3.24
 
 ### Changes / Features
