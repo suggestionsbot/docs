@@ -10,6 +10,20 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
+## `July 30th, 2024` - Version 3.26
+
+### Bug fixes
+
+- Better handle errors where a thread fails to archive
+- Report a suggestion not found while editing suggestion messages
+- Resolved items not being removed from the virtual queue
+- Resolved the `Moderator Note` being added inline within suggestions embeds
+- Fixed `notes` commands failing to respond
+
+### Technical changes
+
+- Emit tracebacks on more logs
+
 ## `June 13th, 2024` - Version 3.25
 
 ### Changes / Features
