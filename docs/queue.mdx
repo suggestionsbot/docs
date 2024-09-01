@@ -32,11 +32,6 @@ If enabled in your guild, when users submit suggestions anonymously, their user 
 
 <QueuedSuggestionEmbedMessage embed={{ anonymousAuthor: true }} />
 
-## Queue Logs Channel
-Whether you choose to set up a virtual or channel queue, you can log rejected suggestions to a set channel. The channel can be unset using the same command, disabling the logging of rejected suggestions.
-- [`/config queue_logs_channel channel:<channel>`](#channel-queue) (to set the queue logs channel)
-- [`/config queue_logs_channel`](#channel-queue) (to unset the queue logs channel)
-
 ## Virtual Queue
 When using the virtual queue, you'll be able to interact with the queue using the following commands:
 
@@ -44,6 +39,18 @@ When using the virtual queue, you'll be able to interact with the queue using th
 - [`/queue view`](#queue-view)
 
 In this mode, queued suggestions do not have a channel presence. The only time suggestions are sent to a channel is when they are approved or rejected.
+
+## Physical Queue
+
+In order to enable the physical queue, run the following commands:
+- [`/config queue_channel channel:<channel>`](#channel-queue) (to set the channel suggestions are sent to)
+- `/config use_channel_queue enable` (to enable to the use of the physical queue)
+
+## Queue Logs Channel
+Whether you choose to set up a virtual or channel queue, you can log rejected suggestions to a set channel. The channel can be unset using the same command, disabling the logging of rejected suggestions.
+- [`/config queue_logs_channel channel:<channel>`](#channel-queue) (to set the queue logs channel)
+- [`/config queue_logs_channel`](#channel-queue) (to unset the queue logs channel)
+
 
 ### Commands
 
