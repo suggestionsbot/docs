@@ -20,6 +20,7 @@ Only changelogs newer than _December 4, 2023_, are documented.
 ### Technical changes
 
 - Upgraded to the latest versions of Disnake and disnake ext components
+- Dockerfile builds
 
 ## `November 4th, 2024` - Version 3.27 
 
