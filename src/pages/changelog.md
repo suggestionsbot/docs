@@ -10,6 +10,34 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
+## `January 26th, 2025` - Version 3.28
+
+### Bug fixes
+
+- Fixed the location of `da` locales
+- Fixed threads failing to archive when suggestions are resolved
+
+### Technical changes
+
+- Upgraded to the latest versions of Disnake and disnake ext components
+
+## `November 4th, 2024` - Version 3.27 
+
+### Changes & Features
+
+- Added Danish and Turkish translations
+- Show physical queue items within /queue view
+
+### Bug fixes
+
+- Allow using /clear on queued items
+- Fix the queue numbers within /queue info
+- Fix queue resolution if a message is deleted
+
+### Technical changes
+
+- Move to poetry
+
 ## `July 30th, 2024` - Version 3.26
 
 ### Bug fixes
