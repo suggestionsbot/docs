@@ -10,6 +10,21 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
+## `Feburary 17th, 2025` - Version 3.29
+
+### Changes & Features
+
+- `/stats` now uses the correct `disnake` version
+- Fix `/clear` failing in some cases
+
+### Technical changes
+
+- Remove backend status pushes as the status page no longer exists
+- Move to GHCR
+- Add `__slots__` to primary DB objects
+- Add blocking monitor to try figure out runtime slowness in clusters
+- Remove push stats
+
 ## `January 26th, 2025` - Version 3.28
 
 ### Bug fixes
