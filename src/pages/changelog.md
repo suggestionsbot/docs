@@ -10,6 +10,33 @@ Review previous changelogs in regard to newly added bot features and when they w
 Only changelogs newer than _December 4, 2023_, are documented.
 :::
 
+## `September 12th, 2025` - Version 3.31
+
+### Changes & Features
+
+- Made errors in suggestions with images more clear
+- Added a maximum file upload size
+- Added Spanish language support
+- Automatically attempt to retry file uploads if they fail the first time
+
+### Bug fixes
+
+- NoneType errors within suggestion creation
+- Some criticals being raised in logs that are actually just error
+- Fixed EN translations mentioning that files persist for two weeks. This is no longer true
+
+### Technical Changes
+
+- Move from `poetry` to `uv`
+- Remove our pytest GitHub workflow
+- Downgrade stats enum logs to debug level
+
+## `September 9th, 2025` - Version 3.30
+
+### Technical Changes
+
+- Fixed the memory issues so in theory the bot will become more responsive now
+
 ## `Feburary 17th, 2025` - Version 3.29
 
 ### Changes & Features
