@@ -1,0 +1,248 @@
+---
+sidebar_position: 2
+title: Commands
+description: View all the available commands and detailed information of the Suggestions bot.
+---
+import ViewVoters from '@site/src/components/Embeds/ViewVoters';
+import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
+
+## Key
+| Key                 | Description                                            |
+|---------------------|--------------------------------------------------------|
+| `< >`               | Required                                               |
+| `[ ]`               | Optional                                               |
+| <code>&vert;</code> | Means "or"                                             |
+| `bot`               | Refers to the Suggestions bot                          |
+
+## General Commands
+
+| Command     |              Description              |                         Guide |
+|-------------|:-------------------------------------:|------------------------------:|
+| dm          |   Enable or disable suggestion DMs    |          [click](#dm-command) |
+| info        |         View bot information          |        [click](#info-command) |
+| ping        |  View the latency of the bot and API  |        [click](#ping-command) |
+| stats       |          View bot statistics          |       [click](#stats-command) |
+| suggest     |        Submit a new suggestion        |     [click](#suggest-command) |
+| view voters | View the voters on a given suggestion | [click](#view-voters-command) |
+
+## Staff Commands
+
+These commands require a staff role or the Manage Server (`MANAGE_GUILD`) permission.
+
+| Command |                       Description                       |                     Guide |
+|---------|:-------------------------------------------------------:|--------------------------:|
+| approve |             Approve a submitted suggestion              | [click](#approve-command) |
+| reject  |              Reject a submitted suggestion              |  [click](#reject-command) |
+| queue   | Get the status of or view the guild's suggestions queue |   [click](#queue-command) |
+| clear| Remove a suggestion and any associated messages | [click](#clear-command) |
+
+## Admin Commands
+
+These commands require the Manage Server (`MANAGE_GUILD`) permission.
+
+| Command               |                        Description                        |                                   Guide |
+|-----------------------|:---------------------------------------------------------:|----------------------------------------:|
+| config                | View and update various configuration settings of the bot |                [click](#config-command) |
+| user blocklist add    |       Remove a users ability to create suggestions        |    [click](#user-blocklist-add-command) |
+| user blocklist remove |       Re-add a users ability to create suggestions        | [click](#user-blocklist-remove-command) |
+
+## Command Information
+
+### Approve Command
+
+```
+/approve <sID|message ID> [response]
+```
+
+Approve a submitted suggestion via its suggestion ID (sID) or message ID with an optional response.
+
+| Option          | Description                                   | Example                                                                                  | Required |
+|-----------------|-----------------------------------------------|------------------------------------------------------------------------------------------|----------|
+| `suggestion_id` | The sID you wish to approve                   | `/approve suggestion_id:lrt97z1s`                                                        | **true** |
+| `response`      | An optional response to add to the suggestion | `/approve suggestion_id:lrt97z1s response:Expect this to be implemented in January 2024` | false    |
+
+### Config Command
+
+```
+/config get [setting]
+/config <setting> <value>
+```
+
+View and update various configuration settings of the bot.
+
+- You can check a specific setting by running `/config get [setting]`
+- You can view an overview of all settings by running `/config get`
+- You can update a specific setting by running `/config <setting> <value>`
+
+Read more about configuring the bot via the [configuration](configuration.mdx) page.
+
+### Clear Command
+
+```
+/clear <suggestion_id> [response]
+```
+
+If you need to remove a duplicate or bugged suggestion, you may use the `/clear` command to remove the suggestion and any associated messages in a channel. You may read more about it [here] [5].
+
+| Option          | Description                                   | Example                                                                      | Required |
+|-----------------|-----------------------------------------------|------------------------------------------------------------------------------|----------|
+| `suggestion_id` | The sID you wish to clear                     | `/clear suggestion_id:lrt97z1s`                                              | **true** |
+| `response`      | An optional response to add to the suggestion | `/clear suggestion_id:lrt97z1s response:This is duplicate to your last one.` | false    |
+
+### DM Command
+
+```
+/dm <view|enable|disable>
+```
+
+View or enable/disable if the bot can DM you regarding suggestions (cannot be overridden if the server has DMs disabled).
+
+### Info Command
+
+```
+/info
+```
+
+The info command displays the bot's authors, description, important links, and the bot version. Some of the most significant information is found here.
+
+### Queue Command
+
+```
+/queue <info|view>
+```
+
+The queue command displays information about the guild's queue (`info`) or displays the queue of suggestions (`view`).
+
+| Option | Description                                           | Example       | Required |
+|--------|-------------------------------------------------------|---------------|----------|
+| `info` | View information about the guild's suggestions' queue | `/queue info` | **true** |
+| `view` | View the guild's suggestions' queue                   | `/queue view` | **true** |
+
+Read more about how you can quality control suggestions in your server via the [queue](queue) page.
+
+### Ping Command
+
+```
+/ping
+```
+
+This command displays the latency of the bot (where it's hosted) and the API (Discord API).
+
+### Reject Command
+
+```
+/reject <sID|message ID> [response]
+```
+
+Reject a submitted suggestion via its suggestion ID (sID) or message ID with an optional response.
+
+| Option          | Description                                   | Example                                                                                 | Required |
+|-----------------|-----------------------------------------------|-----------------------------------------------------------------------------------------|----------|
+| `suggestion_id` | The sID you wish to reject                    | `/reject suggestion_id:lrt97z1s`                                                        | **true** |
+| `response`      | An optional response to add to the suggestion | `/reject suggestion_id:lrt97z1s response:We cannot implement this feature at this time` | false    |
+
+### Stats Command
+
+```
+/stats
+```
+
+The stats command displays information regarding how many servers the bot is in, its uptime, bot version, library version, etc. Check here if you're a geek or just want to see how many servers the bot is in.
+
+### Suggest Command
+
+```
+/suggest <suggestion>
+```
+
+This command will allow the user to submit a new suggestion that will be sent to the set suggestions channel in the server.
+
+
+| Option        | Description                                                                                                           | Example                                                                                | Required |
+|---------------|-----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|----------|
+| `suggestion`  | Your suggestion                                                                                                       | `/suggest suggestion:More emotes for Wumpus`                                           | **true** |
+| `image`       | An image to add to your suggestion, if [allowed] [1] in the server. _Images currently expire after a couple of weeks_ | `/suggest suggestion:Add this emote image:<attached image>`                            | false    |
+| `anonymously` | Submit your suggestion [anonymously] [2]                                                                              | `/suggest suggestion:Add a system to directly report staff to admins anonymously:true` | false    |
+
+### View Voters Command
+
+```
+/view voters <suggestion_id> [filter]
+```
+
+This command will allow the user to view the voters on a particular suggestion. This command is an extension of being able to do the same thing through the [message context menu] [3] on a suggestion.
+
+| Option          | Description                                | Values                                                     | Example                                                | Required |
+|-----------------|--------------------------------------------|------------------------------------------------------------|--------------------------------------------------------|----------|
+| `suggestion_id` | The suggestion you want to view voters for | N/A                                                        | `/view voters suggestion_id:lrt97z1s`                  | **true** |
+| `filter`        | The voters to view for this suggestion     | - `All voters` <br /> - `Up voters` <br /> - `Down voters` | `/view voters suggestion_id:lrt97z1s filter:Up voters` | false    |
+
+Down below, you'll find different examples of how suggestions are displayed.
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="upvoters" />}
+  message={{
+    command: {
+      name: '/view voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
+
+Running `/view voters suggestion_id:lrt97z1s filter:Up voters` will display all users who have upvoted the suggestion.
+<br />
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="downvoters" />}
+  message={{
+    command: {
+      name: '/view voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
+
+Running `/view voters suggestion_id:lrt97z1s filter:Down voters` will display all users who have downvoted the suggestion.
+<br />
+
+<SuggestionEmbedMessage
+  embed={<ViewVoters filter="all" />}
+  message={{
+    command: {
+      name: '/view voters'
+    },
+    ephemeral: true
+  }}
+  ephemeral
+/>
+
+Running `/view voters suggestion_id:lrt97z1s filter:All voters` will display all users who have voted for the suggestion, both upvoters and downvoters.
+
+### User Blocklist Add Command
+
+```
+/user blocklist add <suggestion_id>
+```
+
+This command will allow an administrator to block a specific user from submitting new suggestions. It takes the suggestion ID as input. Read more information on how this works [here] [4].
+
+### User Blocklist Remove Command
+
+```
+/user blocklist remove [suggestion_id|user_id]
+```
+
+This command will allow an administrator to remove a specific user from the suggestion submission blocklist. It takes either a user ID or a suggestion ID as input. Read more information on how this works [here] [4].
+
+| Option          | Description                              | Example                                             | Required |
+|-----------------|------------------------------------------|-----------------------------------------------------|----------|
+| `suggestion_id` | The suggestions ID you wish to reference | `/user blocklist remove suggestion_id:lrt97z1s`     | false    |
+| `user_id`       | The users discord id                     | `/user blocklist remove user_id:158063324699951104` | false    |
+
+[1]: configuration#images-in-suggestions "Configuration: Images in Suggestions"
+[2]: anonymous-suggestions "Anonymous Suggestions"
+[3]: context-menu#view-up-voters "Context Menu: View Up Voters"
+[4]: blocklist "Suggestions Blocklist"
+[5]: managing-suggestions#clearing-suggestions "Managing Suggestions: Clearing Suggestions"
