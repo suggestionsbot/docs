@@ -46,7 +46,7 @@ const config: Config = {
       }),
     ],
   ],
-
+  plugins: [require.resolve('docusaurus-plugin-fathom')],
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',

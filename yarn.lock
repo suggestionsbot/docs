@@ -1473,28 +1473,6 @@
   resolved "https://registry.yarnpkg.com/@csstools/utilities/-/utilities-2.0.0.tgz#f7ff0fee38c9ffb5646d47b6906e0bc8868bde60"
   integrity sha512-5VdOr0Z71u+Yp3ozOx8T11N703wIFGVRgOWbOZMKgglPJsWA54MRIoMNVMa7shUToIhx5J8vX4sOZgD2XiihiQ==
 
-"@discord-components/core@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@discord-components/core/-/core-0.2.4.tgz#d422debdfa911516e351e162c92e1374683dacc6"
-  integrity sha512-b/BlJjBIYr7OZV9JEwYaxn7Uln3u0T9Clei+jwMGTLzXuO3iiwH6TTwFrlzpksO/I8HV91l/9SUQz+v7IBSGYQ==
-  dependencies:
-    "@discord-components/markdown" "^0.2.3"
-    color-rgba "^2.4.0"
-
-"@discord-components/markdown@^0.2.3":
-  version "0.2.3"
-  resolved "https://registry.yarnpkg.com/@discord-components/markdown/-/markdown-0.2.3.tgz#b04002dad35826bfe1a827ef6e45a01eaf963125"
-  integrity sha512-+g6GlmfG+ku/s+zg6l5gerNI5TSazxXd88a2UHG9XgdTbXL4RDwaDcTE+0BgDN41qR4q4ZuBw71uJerbOYi7Ow==
-  dependencies:
-    simple-markdown "^0.7.3"
-
-"@discord-components/react@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@discord-components/react/-/react-0.2.4.tgz#25b1b360259d65f32124c241ea9e5efc94ff2e32"
-  integrity sha512-/R0jGUmr/25jtmvHfNOdBGlnZUE31xNYQ/bUziFZp1aPcJeKZ0iC3f2m4jbwZRRF0mowLWsLfrPsC79OPsfRcw==
-  dependencies:
-    "@discord-components/core" "^0.2.4"
-
 "@discoveryjs/json-ext@0.5.7":
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
@@ -2666,7 +2644,7 @@
     "@types/history" "^4.7.11"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@>=16.0.0":
+"@types/react@*":
   version "19.2.7"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-19.2.7.tgz#84e62c0f23e8e4e5ac2cadcea1ffeacccae7f62f"
   integrity sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==
@@ -3520,30 +3498,10 @@ color-convert@^2.0.1:
   dependencies:
     color-name "~1.1.4"
 
-color-name@^1.0.0, color-name@~1.1.4:
+color-name@~1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
-
-color-parse@^1.4.2:
-  version "1.4.3"
-  resolved "https://registry.yarnpkg.com/color-parse/-/color-parse-1.4.3.tgz#6dadfb49128c554c60c49d63f3d025f2c5a7ff22"
-  integrity sha512-BADfVl/FHkQkyo8sRBwMYBqemqsgnu7JZAwUgvBvuwwuNUZAhSvLTbsEErS5bQXzOjDR0dWzJ4vXN2Q+QoPx0A==
-  dependencies:
-    color-name "^1.0.0"
-
-color-rgba@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/color-rgba/-/color-rgba-2.4.0.tgz#ae85819c530262c29fc2da129fc7c8f9efc57015"
-  integrity sha512-Nti4qbzr/z2LbUWySr7H9dk3Rl7gZt7ihHAxlgT4Ho90EXWkjtkL1avTleu9yeGuqrt/chxTB6GKK8nZZ6V0+Q==
-  dependencies:
-    color-parse "^1.4.2"
-    color-space "^2.0.0"
-
-color-space@^2.0.0:
-  version "2.3.2"
-  resolved "https://registry.yarnpkg.com/color-space/-/color-space-2.3.2.tgz#d8c72bab09ef26b98abebc58bc1586ce3073033d"
-  integrity sha512-BcKnbOEsOarCwyoLstcoEztwT0IJxqqQkNwDuA3a65sICvvHL2yoeV13psoDFh5IuiOMnIOKdQDwB4Mk3BypiA==
 
 colord@^2.9.3:
   version "2.9.3"
@@ -4062,6 +4020,11 @@ dns-packet@^5.2.2:
   integrity sha512-l4gcSouhcgIKRvyy99RNVOgxXiicE+2jZoNmaNmZ6JXiGajBOJAesk1OBlJuM5k2c+eudGdLxDqXuPCKIj6kpw==
   dependencies:
     "@leichtgewicht/ip-codec" "^2.0.1"
+
+docusaurus-plugin-fathom@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/docusaurus-plugin-fathom/-/docusaurus-plugin-fathom-1.2.0.tgz#0e99df109be7da2c6fab83c0cbfdb6e59fc9d339"
+  integrity sha512-F6ieKLOqYfaBTtaCRXzb/aLBjKfX8LOUN3L+6DSp4hcXqPbs41Lvqt/CkOAUujP+qViUajQ7oB5gfUi33CHmWw==
 
 dom-converter@^0.2.0:
   version "0.2.0"
@@ -8194,13 +8157,6 @@ signal-exit@^3.0.2, signal-exit@^3.0.3:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
-
-simple-markdown@^0.7.3:
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/simple-markdown/-/simple-markdown-0.7.3.tgz#e32150b2ec6f8287197d09869fd928747a9c5640"
-  integrity sha512-uGXIc13NGpqfPeFJIt/7SHHxd6HekEJYtsdoCM06mEBPL9fQH/pSD7LRM6PZ7CKchpSvxKL4tvwMamqAaNDAyg==
-  dependencies:
-    "@types/react" ">=16.0.0"
 
 sirv@^2.0.3:
   version "2.0.4"
