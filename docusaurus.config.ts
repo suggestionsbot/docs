@@ -53,6 +53,9 @@ const config: Config = {
       disableSwitch: true,
       respectPrefersColorScheme: false,
     },
+    fathomAnalytics: {
+      siteId: process.env.FATHOM_SITE_ID,
+    },
     navbar: {
       title: 'Suggestions Documentation',
       logo: {
