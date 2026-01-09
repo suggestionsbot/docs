@@ -19,6 +19,18 @@ const config: Config = {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
   },
 
+  // Analytics
+  scripts: [
+    {
+      src: 'https://plausible.skelmis.co.nz/js/pa-FS5cRMCKwlCiT796Dll0l.js',
+      async: true
+    },
+    {
+      src: '/js/plausible.js',
+      async: false
+    }
+  ],
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -46,15 +58,11 @@ const config: Config = {
       }),
     ],
   ],
-  plugins: [require.resolve('docusaurus-plugin-fathom')],
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
       respectPrefersColorScheme: false,
-    },
-    fathomAnalytics: {
-      siteId: process.env.FATHOM_SITE_ID,
     },
     navbar: {
       title: 'Suggestions Documentation',
