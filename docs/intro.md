@@ -15,21 +15,35 @@ Scopes:
 
 Permissions:
 
-* Read Messages/View Channels
-* Send Messages
-* Create Public Threads
-* Send Messages in Threads
-* Manage Messages
-* Embed Links
 * Attach Files
+* Create Public Threads
+* Embed Links
+* Manage Messages
 * Read Message History
+* Send Messages
+* Send Messages in Threads
 * Use External Emojis
+* View Channels
 
 ## Setting Up the Bot
 
-The bot now uses application/slash commands. This provides better integration into Discord and is a more efficient way to use the bot.
+The bot uses application/slash commands. This provides better integration into Discord and is a more efficient way to use the bot.
 
 Once the bot is in your server, there are a few housekeeping things you need to do. (You must have the **Manage Server** permission to complete these steps.)
+
+1. Create a channel for your suggestions to go for users to vote on.
+   1. Add the bot to that channel's permissions and exclusively give it the following permissions:
+      1. **Send Messages**
+      2. **Add Reactions**
+      3. **Create Public Threads**
+      4. **Send Messages in Threads**
+      5. **Manage Threads**
+   2. Disable **Send Messages** and **Add Reactions** for `@everyone` to only allow the bot to send messages and to prevent users from adding unnecessary message reactions.
+2. Create a logs/results channel for approved/rejected suggestions.
+   1. Add the bot to that channel's permissions and exclusively give it the permissions **Send Messages**. (Add additional permissions depending on what you gave the bot in your server.)
+   2. Disable **Send Messages** and **Add Reactions** for `@everyone` to only allow the bot to send messages and to prevent users from adding unnecessary message reactions.
+3. Adjust the permissions of the `approve`, `reject` and `resolve` slash commands in your server's settings via the [Integrations](https://support.discord.com/hc/en-us/articles/360045093012-Server-Integrations-Page) page.
+
 
 1. Create and set a suggestions channel by running `/config channel <channel>`.
    1. Add the bot to that channel's permissions and exclusively give it the permissions **Send Messages** and **Add Reactions**. (Add additional permissions depending on what you gave the bot in your server.)
