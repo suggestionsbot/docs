@@ -88,12 +88,12 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://discord.gg/suggestions',
+          href: 'https://suggestions.gg/contact',
           label: 'Discord',
           position: 'right',
         },
         {
-          href: 'https://github.com/suggestionsbot/suggestions-bot',
+          href: 'https://github.com/suggestionsbot/suggestions-v4',
           label: 'Contribute',
           position: 'right',
         },
@@ -116,15 +116,7 @@ const config: Config = {
           items: [
             {
               label: 'Discord',
-              href: 'https://suggestions.bot/discord',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://suggestions.bot/twitter',
-            },
-            {
-              label: 'YouTube',
-              href: 'https://suggestions.bot/youtube',
+              href: 'https://suggestions.gg/discord',
             }
           ],
         },
