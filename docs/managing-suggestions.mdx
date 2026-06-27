@@ -23,7 +23,7 @@ import SuggestionSlashReply from '@site/src/components/Messages/SuggestionSlashR
 `administrator` = A user with the **Manage Server** permission
 
 ## Overview
-Managing suggestions is simple. Each suggestion is assigned a **Suggestion ID** \(sID\). From there, staff members can either approve, reject, or add a note to a suggestion with the sID. The sID is located in the footer of each suggestion:
+Managing suggestions is simple. Each suggestion is assigned a **Suggestion ID** \(sID\). From there, staff members can either resolve, or add a note to a suggestion with the sID. The sID is located in the footer of each suggestion:
 
 <SuggestionEmbedMessage
   embed={<PendingSuggestion />}
@@ -38,39 +38,34 @@ You can also find the sID in the message the bot sends after you send a suggesti
   embed={<SuggestionConfirmation status="pending" />}
 />
 
-Alternatively, you can use the message ID of the suggestion message to manage a suggestion, especially if you're using the bot on mobile. Click [here](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to check out a tutorial on how to find a message ID.
-
 However, you won't have to worry too much about trying to remember IDs. The bot will autocomplete the suggestion ID as you type it out!
 
 ### Suggestion Threads
-If enabled, you can have the bot [automatically create threads](configuration.mdx#suggestion-thread-channels) when a new suggestion is submitted as well as have them [automatically archived](configuration.mdx#auto-archive-threads) when a suggestion is approved or rejected. View the respective configuration sections for more information.
+If enabled, you can have the bot [automatically create threads](guild-configuration.mdx#suggestion-thread-channels) when a new suggestion is submitted as well as have them [automatically archived](guild-configuration.mdx#auto-archive-threads) when a suggestion is approved or rejected. View the respective configuration sections for more information.
 
 ## Slash Command Permissions
 
 If you haven't already done so, please refer to the [Getting Started](intro.md#setting-up-the-bot) section to set up slash command permissions. By default, only administrators can manage suggestions. However, if you want other staff members to have access to these commands, please refer to the aforementioned section.
 
-## DM Responses
+## Resolve Suggestions
 
-DM responses are sent to the suggestion submitter based on various actions. DM responses may be toggled by running `/config dm <enable/disable>`. This means DMs to the suggestion submitter will or won't be sent via these actions based on how you configure the bot for your server:
+Suggestions are resolve using the sID. Once you have it, run the command `/resolve <sID>` and fill in the form.
 
-- suggestion submitted
-- suggestion approved
-- suggestion rejected
-- suggestion note added
-
-By default, DM responses are enabled. This can be configured by an administrator.
-
-Users can also individually choose if they wish to receive DM responses. This can be configured by running `/dm <enable|disable>`. This will override the server-wide setting unless the server has disabled DM responses.
-
-## Approving Suggestions
-
-Suggestions are approved via either the sID or message ID. Once you have it, run the command `/approve <sID|message ID>`. Afterward, series of actions will happen:
-
+If you opt'd to approve the suggestion for example, the following series of actions will happen:
 - The suggestion will update as "Approved" in the suggestions channel and its results will be logged.
 - The user will receive a DM that you approved their suggestion.
 - The results of that suggestion will be posted to the suggestion logs channel.
-- If a response has been added via `/approve <sID|message ID> [response]`, that will be displayed in the results message.
-- If the suggestion has a thread attached, it'll automatically be archived if enabled in the [configuration](configuration.mdx#auto-archive-threads).
+- If a response has been added, that will be displayed in the results message.
+- If the suggestion has a thread attached, it'll automatically be archived if enabled in the [configuration](guild-configuration.mdx#auto-archive-threads).
+
+Currently, the following resolution options are available:
+- Approve
+- Reject
+- Implemented
+- Duplicate
+
+All of these options can be used in the `/resolve` command. For backwards compatibility we also have `/approve` and `/reject` to approve and reject suggestions without a modal.
+
 
 <SuggestionEmbedMessage
   embed={<SuggestionStatusEmbed status="approved" />}
@@ -90,24 +85,6 @@ If you enabled DM responses and the user has enabled them, they will receive a D
 
 It seems like a lot, doesn't it? It really isn't, because it all happens in the matter of seconds!
 
-## Rejecting Suggestions
-
-Rejecting suggestions work the same way as approving suggestions. Once you run the command `/reject <sID|message ID> [response]`, the same series of actions will happen as stated above, but information of the suggestion being rejected will be posted instead.
-
-<SuggestionEmbedMessage
-  embed={<SuggestionStatusEmbed status="rejected" />}
-/>
-
-Just like with approving suggestions, you can add an optional response to the rejection and receive a DM from the bot (if applicable).
-
-<SuggestionEmbedMessage
-  embed={<SuggestionStatusEmbed status="rejected" response />}
-/>
-
-<SuggestionEmbedMessage
-  embed={<SuggestionConfirmation status="rejected" />}
-/>
-
 ## Suggestions Logging
 
 When a suggestion is approved or rejected, the following information will be logged:
@@ -123,12 +100,7 @@ When a suggestion is approved or rejected, the following information will be log
   embed={<SuggestionConfirmation status="approved" response />}
 />
 
-If you wish to set up the suggestion logs channel, you may refer to the steps below:
-
-1. Create a new channel and give it a name such as `suggestion-results`.
-2. Add the bot to your newly created channel and give it the **Send Messages** permission.
-3. Add additional permissions depending on what the bot has assigned in your server.
-4. Disable **Send Messages** and **Add Reactions** for `@everyone` to only allow the bot to send messages and to prevent unnecessary message reactions.
+If you wish to set up the suggestion logs channel, you may refer [here](guild-configuration#suggestion-log-management).
 
 ## Clearing Suggestions
 
