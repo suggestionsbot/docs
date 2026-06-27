@@ -1,0 +1,146 @@
+---
+sidebar_position: 2
+title: Guild Configuration
+description: Learn how to configure various aspects of the Suggestions bot.
+---
+import QueuedSuggestionEmbedMessage
+  from '@site/src/components/Messages/QueuedSuggestionEmbedMessage';
+import ServerConfiguration from '@site/src/components/Embeds/ServerConfiguration';
+import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
+import SuggestionThreadMessage from '@site/src/components/Messages/SuggestionThreadMessage';
+
+
+## Key
+| Key                 | Description                                                                 |
+|---------------------|-----------------------------------------------------------------------------|
+| `< >`               | Required                                                                    |
+| `[ ]`               | Optional                                                                    |
+| <code>&vert;</code> | Means "or"                                                                  |
+| `bot`               | Refers to the Suggestions bot                                               |
+| `administrator`     | Refers to a user with the **Manage Server** or **Administrator** permission |
+
+**Note:** The placeholder characters `< >` and `[ ]` are _not_ required when running commands.
+
+One of the core components of the bot is the fact that the administrators can configure various aspects of the bot to their liking. From the suggestions channel to DM responses, you can take control of your server's experience.
+
+With Discord's slash commands, it's easy to configure the bot with readable and UI-friendly commands and options.
+
+Configuring the bot is really easy. Simply run `/configure guild` and click on the provided buttons.
+
+The following items are ordered by the way they appear in the responses.
+
+## Default Menu - Page 1
+
+### Suggestions Channel
+
+You can either view or set the channel where suggestions will be posted. You will be able to choose from a list of text channels in your server when selected.
+
+### Suggestion Thread Channels
+
+When a suggestion is created, should a thread be created for discussions?
+
+<SuggestionThreadMessage />
+
+When approving or rejecting a thread, you can opt to have the thread automatically be archived via the [auto archive threads](#auto-archive-threads) configuration.
+
+
+### Auto Archive Threads
+
+When enabled, this configuration allows the bot to automatically archive suggestions threads when resolved.
+
+
+### Ping Author In Thread
+
+If a thread is created on new suggestions, should the suggestion author be pinged in the thread?
+
+*Note: If the author has selected anonymous they won't be pinged*
+
+
+### Anonymous Suggestions
+
+When enabled, this configuration allows users to optionally submit a suggestion as anonymous, omitting any of their profile information from the suggestion. Read more about this feature [here](anonymous-suggestions.mdx).
+
+
+### Images In Suggestions
+
+By default, users can attach images to new suggestions. If disabled, submitters will receive a warning that they cannot add images as a Discord attachment.
+
+Users can attach up to five images to suggestions when enabled.
+
+### Send Suggestions Button
+
+Select channels to send a static button to. This button will allow users to create a suggestion when clicked.
+
+## Default Menu - Page 2
+
+### Suggestion Log Management
+
+This allows you to manage what happens to suggestions when resolved. The options do the following:
+- `Same Message`: When enabled, this configuration allows a suggestion to remain in the channel when approved or rejected vs. the bot being deleting the original message and posting the results to the set configuration channel.
+- `Dedicated Channel`: The [Change Log Channel](#change-log-channel-menu) is opened. This will let you configure a channel to send resolved suggestions to.
+
+### Anonymous Moderators
+
+When enabled, this configuration allows moderators to optionally submit actions as anonymous, omitting any of their profile information from the suggestion. Read more about this feature [here](anonymous-suggestions.mdx).
+
+
+### Suggestion Queue
+
+When enabled, all new suggestions are sent to either a virtual or channel queue for approval. Once a suggestion is approved, it is sent to the set suggestions channel for the public to vote on.
+
+The options are as follows:
+- `No Queue`: All suggestions go directly to the configured suggestions channel.
+- `Virtual Suggestions Queue`: All suggestions are stored virtually and moderators must run `/queue view` to review suggestions.
+- `Send them to a channel based queue`: The [Configure Channel Based Suggestions Queue and Logs Menu](#configure-channel-based-suggestions-queue-and-logs-menu) is launched to configure channels in your guild to send queued suggestions to.
+
+Read more about the suggestion queue [here](queue).
+
+
+### DM Responses
+
+When disabling DM responses, the bot won't DM the user on these actions:
+
+- A suggestion is submitted (an ephemeral message will be sent instead)
+- A suggestion is resolved
+
+Users are also able to configure their own DM settings using the `/configure user` command. This allows a user to choose their own preferences. However, they cannot override your server's settings.
+
+This means if you disabled DMs via the `/configure guild` command, the user will not be able to receive them if they tried to enable them.
+
+### Guild Language
+
+Select the default language for your guild. If we support it, we will use this language in the bots public messages such as suggestion embeds.
+
+Defaults to English.
+
+*Want your language present? Reach out to us and help us translate the bot.*
+
+### Update Channel
+
+Occasionally we release cool new features and want to inform you that they exist. Further we may use this channel to inform you of important events such as planned maintenance outages.
+
+Intended uses for this include announcing when the dashboard goes live later this year.
+
+*Leaving this blank affects no functionality of the bot.*
+
+## Change Log Channel Menu
+
+### Suggestions Logs Channel
+
+You can either view or set the channel where suggestion results will be posted after a suggestion is approved or denied. The options to pass through follow the same as setting the [Suggestions Channel](#suggestions-channel).
+
+## Configure Channel Based Suggestions Queue and Logs Menu
+
+### Queue Channel
+
+You can view or set the channel where queued suggestions will be posted. You can choose from a list of text channels in your server. To use physical queues, you must enable the queue channel.
+
+<QueuedSuggestionEmbedMessage />
+
+Read more about the suggestion queue [here](queue#channel-queue).
+
+### Queue Log Channel
+
+You can view, set, or remove the channel where rejected suggestions in the queue are sent. You can choose from a list of text channels in your server.
+
+Read more about the suggestion queue [here](queue#channel-queue).
