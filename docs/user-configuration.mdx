@@ -1,0 +1,38 @@
+---
+sidebar_position: 2
+title: User Configuration
+description: Learn how to configure various aspects of the Suggestions bot.
+---
+import QueuedSuggestionEmbedMessage
+  from '@site/src/components/Messages/QueuedSuggestionEmbedMessage';
+import ServerConfiguration from '@site/src/components/Embeds/ServerConfiguration';
+import SuggestionEmbedMessage from '@site/src/components/Messages/SuggestionEmbedMessage';
+import SuggestionThreadMessage from '@site/src/components/Messages/SuggestionThreadMessage';
+
+On top of server wide configurations, we also provide ways for you to enhance your own experience with the bot.
+
+All of these configurations can be found in `/configure user` and are described in the order they appear.
+
+*Note: If a guild has disabled the relevant setting, then configuring it on yourself will not change the outcome.*
+
+### DM Responses
+
+When disabling DM responses, the bot won't DM you on these actions:
+
+- A suggestion is submitted (an ephemeral message will be sent instead)
+- A suggestion is resolved
+
+
+### Ping Author In Thread
+
+If a thread is created on new suggestions, would you like to be pinged in the thread?
+
+*Note: If you selected anonymous you won't be pinged.*
+
+### User Language
+
+Select the default language for you. If we support it, we will use this language in the bots messages to you.
+
+Defaults to English.
+
+*Want your language present? Reach out to us and help us translate the bot.*
