@@ -33,7 +33,7 @@ These commands require a staff role or the Manage Server (`MANAGE_GUILD`) permis
 | approve         |              Approve a submitted suggestion               |         [click](#approve-command) |
 | reject          |               Reject a submitted suggestion               |          [click](#reject-command) |
 | resolve         | Resolve a submitted suggestion with more resolution types |         [click](#resolve-command) |
-| queue info      |  Get the status of or view the guild's suggestions queue  |           [click](#queue-command) |
+| queue           |  Get the status of or view the guild's suggestions queue  |           [click](#queue-command) |
 | clear           |      Remove a suggestion and any associated messages      |           [click](#clear-command) |
 | note add        |                Add a note to a suggestion                 |        [click](#note-add-command) |
 | note remove     |              Remove a note from a suggestion              |     [click](#note-remove-command) |
@@ -47,7 +47,7 @@ These commands require a staff role or the Manage Server (`MANAGE_GUILD`) permis
 ### Approve Command
 
 ```
-/approve <sID|message ID> [response] [anonymously]
+/approve <sID> [response] [anonymously]
 ```
 
 Approve a submitted suggestion via its suggestion ID (sID) with an optional response.
@@ -109,6 +109,32 @@ The info command displays the bot's authors, description, important links, and t
 |-----------|----------------------------------------------|----------------------|----------|
 | `support` | Set to receive info relevant to getting help | `/info support:True` | false    |
 
+### Note Add Command
+
+```
+/note add <sID> [note] [anonymously]
+```
+
+Add a moderator note to a suggestion.
+
+| Option          | Description                     | Example                                                                               | Required |
+|-----------------|---------------------------------|---------------------------------------------------------------------------------------|----------|
+| `suggestion_id` | The sID you wish to add note to |                                                                                       | **true** |
+| `note`          | A note to add to the suggestion | `/note add suggestion_id:lrt97z1s note:We cannot implement this feature at this time` | **true** |
+| `anonymously`   | Hide your name in the response  | `/note add suggestion_id:lrt97z1s anonymously:True`                                   | false    |
+
+### Note Remove Command
+
+```
+/note remove <sID>
+```
+
+Remove a moderator note on a suggestion.
+
+| Option          | Description                            | Example                               | Required |
+|-----------------|----------------------------------------|---------------------------------------|----------|
+| `suggestion_id` | The sID you wish to remove a note from | `/note remove suggestion_id:lrt97z1s` | **true** |
+
 
 ### Queue Command
 
@@ -128,16 +154,24 @@ Read more about how you can quality control suggestions in your server via the [
 ### Reject Command
 
 ```
-/reject <sID|message ID> [response] [anonymously]
+/reject <sID> [response] [anonymously]
 ```
 
-Reject a submitted suggestion via its suggestion ID (sID) or message ID with an optional response.
+Reject a submitted suggestion via its suggestion ID (sID) with an optional response.
 
 | Option          | Description                                   | Example                                                                                 | Required |
 |-----------------|-----------------------------------------------|-----------------------------------------------------------------------------------------|----------|
 | `suggestion_id` | The sID you wish to reject                    | `/reject suggestion_id:lrt97z1s`                                                        | **true** |
 | `response`      | An optional response to add to the suggestion | `/reject suggestion_id:lrt97z1s response:We cannot implement this feature at this time` | false    |
 | `anonymously`   | Hide your name in the response                | `/reject suggestion_id:lrt97z1s anonymously:True`                                       | false    |
+
+### Setup Command
+
+```
+/setup
+```
+
+An easy way to configure the minimum required items to use the bot. See `/configure guild` for full configuration options.
 
 ### Stats Command
 
