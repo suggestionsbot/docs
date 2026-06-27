@@ -17,9 +17,8 @@ Learn below how you can utilize this feature in your server today!
 
 ## Getting Started
 
-To start allowing the submission of anonymous suggestions, enable the feature with the `/config anonymous enable` command. The feature is disabled by default.
+To start allowing the submission of anonymous suggestions, enable the feature with the `/configur eguild` command. The feature is enabled by default.
 
-<SuggestionSlashReply command="/config anonymous enable" message="I have enabled anonymous suggestions for this guild." />
 
 ## Usage
 
@@ -51,13 +50,9 @@ When approving or rejecting suggestions, everything is the same as explained ove
 ## Anonymous Resolutions
 Anonymity is an integral part of many communities here on Discord; it's why we've also extended the anonymity of suggestions to the resolution process.
 
-By enabling anonymous resolutions, you protect your staff member's identities when approving and rejecting suggestions.
+By enabling anonymous resolutions, you protect your staff member's identities when resolving suggestions and adding notes.
 
-To utilize this feature today, run `/config anonymous_resolutions enable`.
-
-<SuggestionSlashReply command="/config anonymous_resolutions enable" message="All further suggestions will not show the moderator who resolved them." />
-
-With it enabled, the process runs similarly to everything above. In this case, the moderator who resolved the suggestion is automatically marked anonymous upon resolution. Not only does this apply to the suggestion message itself, but the DM sent to the author as well.
+With it enabled, the process runs similarly to everything above. In this case, the moderator who resolved the suggestion can mark themselves as anonymous. Not only does this apply to the suggestion message itself, but the DM sent to the author as well.
 
 <SuggestionEmbedMessage
   embed={<SuggestionStatusEmbed status="rejected" anonymousModerator anonymousAuthor response />}
@@ -78,7 +73,7 @@ It also works when the moderator responds.
 
 ## More Information
 
-As the actual submitter of the suggestion remains anonymous, the voters are not anonymous. Currently, the feature is mainly designed for the suggestion submitter itself.
+While the actual submitter of the suggestion remains anonymous, the voters are not anonymous. Currently, the feature is mainly designed for the suggestion submitter itself.
 
 For moderation reasons, we still log information such as the user ID of the submitted suggestion. This helps us combat any reported abuse with the bot and to continue our efforts in collecting statistics (more in our [Privacy Policy](https://suggestions.gg/privacy)).
 
