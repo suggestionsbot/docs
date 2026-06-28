@@ -75,7 +75,7 @@ Read more about configuring the bot via the [guild configuration](guild-configur
 ### Configure User Command
 
 ```
-/configure user
+/user configure
 ```
 
 Configure various user settings.
@@ -258,7 +258,7 @@ Running `/view voters suggestion_id:lrt97z1s filter:All voters` will display all
 ### User Block Command
 
 ```
-/user block <suggestion_id>
+/blocklist add <suggestion_id>
 ```
 
 This command will allow an administrator to block a specific user from submitting new suggestions. It takes the suggestion ID as input. Read more information on how this works [here](blocklist).
@@ -266,12 +266,12 @@ This command will allow an administrator to block a specific user from submittin
 ### User Unblock Command
 
 ```
-/user unblock [suggestion_id|user_id]
+/blocklist remove[suggestion_id|user_id]
 ```
 
 This command will allow an administrator to remove a specific user from the suggestion submission blocklist. It takes either a user ID or a suggestion ID as input. Read more information on how this works [here](blocklist).
 
 | Option          | Description                              | Example                                             | Required |
 |-----------------|------------------------------------------|-----------------------------------------------------|----------|
-| `suggestion_id` | The suggestions ID you wish to reference | `/user blocklist remove suggestion_id:lrt97z1s`     | false    |
-| `user_id`       | The users discord id                     | `/user blocklist remove user_id:158063324699951104` | false    |
+| `suggestion_id` | The suggestions ID you wish to reference | `/blocklist remove suggestion_id:lrt97z1s`     | false    |
+| `user_id`       | The users discord id                     | `/blocklist remove user_id:158063324699951104` | false    |
