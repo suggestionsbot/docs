@@ -35,6 +35,7 @@ import { DiscordCode } from '@skyra/discord-components-react';
 | 23   | MISSING_QUEUE_LOG_CHANNEL                        | [click](#missing-queue-log-channel)                       |
 | 24   | MISSING_PERMISSIONS_IN_QUEUE_CHANNEL             | [click](#missing-permissions-in-queue-channel)            |
 | 25   | INVALID_FILE_TYPE                                | [click](#invalid-file-type)                               |
+| 26   | BOT_NOT_CONFIGURED                                | [click](#bot-not-configured)                               |
 ## Error Information
 
 ### Suggestion Message Deleted
@@ -317,3 +318,18 @@ This error is thrown when uploading an invalid image file type on a suggestion.
     </>
   }
   code={25} />
+
+
+### Bot Not Configured
+
+This error is thrown when trying to use commands such as <DiscordCode>/suggest</DiscordCode> without having configured the bot.
+<ErrorEmbed
+  title="Missing bot configuration"
+  description={
+    <>
+        The bot requires further configuration to setup.
+      <br/><br/>
+        Please get an administrator to run <DiscordCode>/setup</DiscordCode> and complete the provided form before redoing this action.
+    </>
+  }
+  code={26} />
