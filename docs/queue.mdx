@@ -21,7 +21,7 @@ Improve the quality of your community by moderating its suggestions. Learn more 
 This feature will send all suggestions made via `/suggest` to a queue, after which a moderator for your server can approve or reject suggestions before the public views them in your suggestions channel for voting. The queue can managed and interacted with virtually or through a text channel in your server. Additionally, you may set a logs channel for rejected suggestions from the queue to be accounted for.
 
 ## Usage
-To enable the suggestions queue, run `/config suggestion_queue enable`.  From here, you may manage the queue in one of two ways:
+To enable the suggestions queue, run `/configure guild` and configure the queue related items.  From here, you may manage the queue in one of two ways:
 - [Virtual Queue](#virtual-queue)
 - [Channel Queue](#channel-queue)
 
@@ -42,14 +42,15 @@ In this mode, queued suggestions do not have a channel presence. The only time s
 
 ## Physical Queue
 
-In order to enable the physical queue, run the following commands:
-- [`/config queue_channel channel:<channel>`](#channel-queue) (to set the channel suggestions are sent to)
-- `/config use_channel_queue enable` (to enable to the use of the physical queue)
+In order to configure the physical queue, run the following command:
+- `/configure guild menu:Configure Channel Based Suggestions Queue and Logs`
+
+This will have suggestions being sent to a channel in your discord for review.
 
 ## Queue Logs Channel
+
 Whether you choose to set up a virtual or channel queue, you can log rejected suggestions to a set channel. The channel can be unset using the same command, disabling the logging of rejected suggestions.
-- [`/config queue_logs_channel channel:<channel>`](#channel-queue) (to set the queue logs channel)
-- [`/config queue_logs_channel`](#channel-queue) (to unset the queue logs channel)
+- `/configure guild menu:Configure Channel Based Suggestions Queue and Logs`
 
 
 ### Commands
@@ -92,7 +93,7 @@ Check below for example embeds on the previous actions.
 You'll receive this message in the channel when approving the selected queued suggestion.
 
 ### Rejecting a suggestion
-When you hit the red 'x' button, you reject and remove the suggestion from the queue. When this happens, the bot will also attempt to [DM the author](configuration#dm-responses) of the suggestion about their suggestion's rejection.
+When you hit the red 'x' button, you reject and remove the suggestion from the queue. When this happens, the bot will also attempt to [DM the author](guild-configuration#dm-responses) of the suggestion about their suggestion's rejection.
 
 Check below for example embeds on the previous actions.
 

@@ -17,17 +17,16 @@ On this page, we'll let you know what each command in the context menu does. The
 
 To invoke a message command via the context menu, simply right click or long press the suggestion message. If you go to the "Apps" option, you'll see the following commands:
 
-- [Approve suggestion](#approve-suggestion)
-- [Reject suggestion](#reject-suggestion)
+- [Resolve suggestion](#resolve-suggestion)
 - [View down voters](#view-down-voters)
 - [View up voters](#view-up-voters)
 - [View voters](#view-voters)
 
-You will need the `Send Messages` permission in the channel you're doing this in. Otherwise, the "Apps" sub-menu will not display. We are currently looking into alternative options such as slash commands to easily display this information (aside from the `approve` and `reject` commands).
+You will need the `Send Messages` permission in the channel you're doing this in. Otherwise, the "Apps" sub-menu will not display.
 
-## Approve Suggestion
+## Resolve Suggestion
 
-This is a shortcut to using the [`/approve`](managing-suggestions.mdx#approving-suggestions) command.
+This is a shortcut to using the [`/resolve`](managing-suggestions.mdx) command. You can use this to resolve the suggestion with any resolution type / response / anonymously.
 
 The bot will throw an error if the suggestion does not exist on the message.
 
@@ -40,20 +39,6 @@ The bot will throw an error if the suggestion does not exist on the message.
   }}
 />
 
-## Reject Suggestion
-
-This is a shortcut to using the [`/reject`](managing-suggestions.mdx#rejecting-suggestions) command.
-
-The bot will throw an error if the suggestion does not exist on the target message.
-
-<ErrorEmbed
-  title="Command failed"
-  description="This message does not look like a suggestions message."
-  code={5}
-  command={{
-    name: 'Reject suggestion'
-  }}
-/>
 
 ## View up voters
 
