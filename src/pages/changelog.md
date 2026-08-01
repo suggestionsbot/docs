@@ -6,6 +6,26 @@ description: Look at past non-technical changes made to the documentation.
 # Changelog
 Review previous changelogs in regard to newly added bot features and when they were documented on the website.
 
+## Version 4 Changelog
+
+### Version 4.1 - August 1st 2026
+
+#### User facing changes
+
+- Added support for custom thread names on suggestions
+- Added a link to resolved suggestions containing a link to the initial suggestion thread
+- Localise the view docs buttons
+- Error if trying to resolve things anonymously when disabled
+- Allow suggesting from suggestion buttons without a log channel configured
+
+#### Technical changes
+
+- Remove null bytes from stored error tracebacks
+- Added an aggregated statistics page to the dashboard
+- Aggregate statistics per week
+- Cache DM channel ids
+- Fix OTEL user attributes
+
 ## Migrating to Version 4
 
 We have migrated all user data to the new version. You should not need to reconfigure anything and should be able to continue using the bot as you do today. although some command names have changed.
