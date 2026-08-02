@@ -17,6 +17,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 - Localise the view docs buttons
 - Error if trying to resolve things anonymously when disabled
 - Allow suggesting from suggestion buttons without a log channel configured
+- Modify voter storage to also track user names
 
 #### Technical changes
 
