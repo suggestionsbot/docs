@@ -8,6 +8,24 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 ## Version 4 Changelog
 
+### Version 4.2 - August 8th 2026
+
+#### User facing changes
+
+- Added guild premium
+  - This can be managed via the dashboard
+- Added support for sending custom content with suggestions, such as pinging a reviewer role
+- Added support for custom suggestion cooldowns
+- Added support for custom names and avatars (Only on custom instances)
+- Limited the view voters message commands to guilds
+
+#### Technical changes
+
+- Handle if users leave anonymous blank
+- Add tests for the payment flow
+- Disabled various dashboard pages that are still under construction
+- Cleaned up our translation files
+
 ### Version 4.1 - August 1st 2026
 
 #### User facing changes
