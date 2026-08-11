@@ -13,7 +13,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 #### User facing changes
 
 - Added guild premium
-  - This can be managed via the dashboard
+  - This can be managed via the [dashboard here](https://dashboard.suggestions.gg/stripe/guilds/tokens)
 - Added support for sending custom content with suggestions, such as pinging a reviewer role
 - Added support for custom suggestion cooldowns
 - Added support for custom names and avatars (Only on custom instances)
