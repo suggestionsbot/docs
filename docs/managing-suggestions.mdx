@@ -45,7 +45,34 @@ If enabled, you can have the bot [automatically create threads](guild-configurat
 
 ## Slash Command Permissions
 
-If you haven't already done so, please refer to the [Getting Started](intro.md#setting-up-the-bot) section to set up slash command permissions. By default, only administrators can manage suggestions. However, if you want other staff members to have access to these commands, please refer to the aforementioned section.
+By default, only users with "Manage Server" permissions can manage suggestions. However, if you want other staff members to have access to these commands, the following steps can be followed:
+- Navigate to your guilds settings page. This is "Server Settings" in the dropdown.
+- Click "Integrations".
+- Under "Bots and Apps" click on "Suggestions Bot".
+- Click on the command you wish to edit, for this example select "/resolve".
+- Select "Add roles or members" to edit who can use the command.
+- Select the roles or members you want before clicking "Add".
+- Under the menu post selection you can now add or remove permissions for those selected items.
+- Click "Save".
+- Repeat for all commands you want to change.
+
+If you are editing one of the following commands, we recommend also editing the others.
+
+Group one:
+- `/resolve`
+- `/approve`
+- `/reject`
+- `/queue`
+- `Resolve Suggestion`
+
+Group two:
+- `/setup`
+- `/configure`
+- `/blocklist`
+
+*Due to Discord restrictions, this cannot be done on Discord Mobile at the time of writing*
+
+You can read the [official Discord page here](https://support.discord.com/hc/en-us/articles/360045093012-Server-Integrations-Page).
 
 ## Resolve Suggestions
 
