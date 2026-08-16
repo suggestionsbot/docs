@@ -18,6 +18,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 - Added support for custom suggestion cooldowns
 - Added support for custom names and avatars (Only on custom instances)
 - Limited the view voters message commands to guilds
+- Limit Suggestion message commands to guild only
 
 #### Technical changes
 
