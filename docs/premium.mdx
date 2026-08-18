@@ -1,0 +1,74 @@
+---
+sidebar_position: 3
+title: Premium Configuration
+description: Manage premium options for the bot.
+---
+
+## Overview
+
+We provide a premium offering within the bot which is designed to enhance the base experience and provide extra features some guilds may find useful. We are committed to core features remaining free, and our premium offering provides a way to help us ensure the bot stays online :)
+
+At a glance premium can offer the following benefits:
+- Custom cooldowns to limit how often users suggest.
+    - Set configurations such as "One suggestion per user per week"
+- Ping roles when new suggestions and queued suggestions are made.
+    - Set configurations such as "A new queued suggestion has been made @Reviewers"
+- We also offer custom branding, but this is via custom instances. If you'd like this, reach out to us via Discord.
+
+Premium can be managed via our dashboard at [this link](https://dashboard.suggestions.gg/stripe/guilds/tokens).
+
+## Guild Premium Configuration
+
+In order to access premium configuration options, run the following command: `/configure guild menu:Configure Premium`
+
+### Custom Name
+
+*This feature is limited to custom instances of the bot.*
+
+This feature lets you edit the name of the bot in a single guild. This allows for configuration at a guild level, where as the custom instance is typically only at a bot level.
+
+When you click `Edit Name` a modal will pop up. The bot will then edit it's name in this guild to the value you provide.
+
+If you want to reset the name, leave the modal empty when submitting.
+
+### Custom Avatar
+
+*This feature is limited to custom instances of the bot.*
+
+This feature lets you edit the avatar of the bot in a single guild. This allows for configuration at a guild level, where as the custom instance is typically only at a bot level.
+
+When you click `Edit Avatar` a modal will pop up. The bot will then edit it's avatar in this guild to the value you provide.
+
+If you want to reset the avatar, leave the modal empty when submitting.
+
+### Custom Suggestion Messages
+
+This feature lets you add a custom message to go alongside a suggestion. Want to ping a role on new suggestions? This is the feature for that.
+
+When selecting `Edit Suggestion Message` a modal will pop up asking for both content and a list of roles to ping. You may select either, however only role pings are supported. Pinging anything other than a role will not generate notifications.
+
+If you want to reset this to nothing, leave the modal empty when submitting.
+
+### Custom Queued Suggestion Messages
+
+This feature lets you add a custom message to go alongside a queued suggestion. Want to ping a role on new queued suggestions to let reviewers know something is ready for review? This is the feature for that.
+
+When selecting `Edit Queued Suggestion Message` a modal will pop up asking for both content and a list of roles to ping. You may select either, however only role pings are supported. Pinging anything other than a role will not generate notifications.
+
+If you want to reset this to nothing, leave the modal empty when submitting.
+
+### Custom Suggestions Cooldowns
+
+By default, the bot enforces a global command cooldown of three seconds, however this may not be enough for your use case. Custom suggestion cooldowns let you configure a cooldown specific to your communities needs. Examples include once per day, five per week, etc.
+
+When you click `Configure Custom Suggestions Cooldown` a modal appears with the following options:
+- `Amount`: How many times a user can run `/suggest` within the Cooldown Period. This must be a round number.
+- `Cooldown Period`: The period that Amount applies to.
+
+For example, to configure a custom cooldown of five per week, set Amount equal to `5` and Cooldown Period to `Week`.
+
+Click `Remove Custom Suggestions Cooldown` to reset your guilds `/suggest` command back to global limits. Removing cooldowns will also wipe all existing custom cooldowns your users have hit, essentially functioning as a form of soft reset.
+
+Currently, the cooldown is not reset when permission errors are encountered as we were unsure of its applicability. If you encounter issues with this please reach out to us in our Discord.
+
+Technical detail: The cooldowns are implemented via [Leaky Buckets](https://en.wikipedia.org/wiki/Leaky_bucket). This describes how amounts are distributed over the cooldown period at a technical level.

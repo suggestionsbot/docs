@@ -83,6 +83,11 @@ const config: Config = {
           position: 'left'
         },
         {
+          to: 'docs/premium',
+          label: 'Premium',
+          position: 'left'
+        },
+        {
           href: 'https://suggestions.gg/',
           label: 'Website',
           position: 'right',
