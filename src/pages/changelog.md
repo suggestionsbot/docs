@@ -8,6 +8,20 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 ## Version 4 Changelog
 
+### Version 4.3 - August 21st 2026
+
+#### User facing changes
+- Modified some translations 
+- Fixed 404 errors within the site throwing "Internal Server Error"
+- Error correctly when thread names are too long for Discord
+
+#### Technical changes
+- Added the ability to gift premium
+- Better handle errors within the Stripe webhook
+- Don't try edit suggestions that don't exist
+- Reworked admin panel views for better readability
+- Fixed OAuth using the wrong provider name internally
+
 ### Version 4.2 - August 8th 2026
 
 #### User facing changes
