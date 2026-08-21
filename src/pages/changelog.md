@@ -21,6 +21,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 - Don't try edit suggestions that don't exist
 - Reworked admin panel views for better readability
 - Fixed OAuth using the wrong provider name internally
+- Marked dashboard exceptions correctly in telemetry
 
 ### Version 4.2 - August 8th 2026
 
