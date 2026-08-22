@@ -14,6 +14,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 - Modified some translations 
 - Fixed 404 errors within the site throwing "Internal Server Error"
 - Error correctly when thread names are too long for Discord
+- Users can now change the message and button wording for the physical button
 
 #### Technical changes
 - Added the ability to gift premium
