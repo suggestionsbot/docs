@@ -11,6 +11,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 ### Version 4.4 - September 8th 2026
 
 #### User facing changes
+- Link subscriptions to the correct Stripe customer
 - Add support for user premium
   - Users can now subscribe to receive notifications when suggestions they voted on are resolved
 
