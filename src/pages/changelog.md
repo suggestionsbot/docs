@@ -8,6 +8,16 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 ## Version 4 Changelog
 
+### Version 4.4 - September 8th 2026
+
+#### User facing changes
+- Add support for user premium
+  - Users can now subscribe to receive notifications when suggestions they voted on are resolved
+
+#### Technical changes
+- Added more tests on core routes
+- Cache DM channels in the DB to help avoid rate limits
+
 ### Version 4.3 - August 21st 2026
 
 #### User facing changes
