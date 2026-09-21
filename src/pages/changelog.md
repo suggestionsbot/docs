@@ -8,6 +8,15 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 ## Version 4 Changelog
 
+### Version 4.5 - Unreleased
+
+#### User facing changes
+- Dashboard sessions now last longer
+
+#### Technical changes
+- Better telemetry on backend tasks
+- Updated the actions pipeline to better suit our workflows
+
 ### Version 4.4 - September 8th 2026
 
 #### User facing changes
