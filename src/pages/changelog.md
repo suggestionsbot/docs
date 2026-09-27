@@ -12,10 +12,12 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 #### User facing changes
 - Dashboard sessions now last longer
+- Fixed users experiencing some locale errors
 
 #### Technical changes
 - Better telemetry on backend tasks
 - Updated the actions pipeline to better suit our workflows
+- Improved backend statistic tracking
 
 ### Version 4.4 - September 8th 2026
 
