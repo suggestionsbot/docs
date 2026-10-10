@@ -8,16 +8,20 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 ## Version 4 Changelog
 
-### Version 4.5 - Unreleased
+### Version 4.5 - October 10th 2026
 
 #### User facing changes
 - Dashboard sessions now last longer
 - Fixed users experiencing some locale errors
+- Added Spanish support
+  - This was a machine translation, let us know if anything is wrong
+- Create Suggestion buttons can now be sent without a message
 
 #### Technical changes
 - Better telemetry on backend tasks
 - Updated the actions pipeline to better suit our workflows
 - Improved backend statistic tracking
+- Fix an oauth error in our dashboard
 
 ### Version 4.4 - September 8th 2026
 
