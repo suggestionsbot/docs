@@ -16,6 +16,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 - If a suggestion is too long, direct users to view the suggestion in the web viewer
 - Added the ability to view suggestions on our dashboard
 - Suggestion footers now have a link to view in the dashboard
+- The dashboard has dark mode now. Click the Extras dropdown to find the toggle
 
 #### Technical changes
 - Updated dependencies
