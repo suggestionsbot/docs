@@ -8,6 +8,22 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 ## Version 4 Changelog
 
+### Version 4.6 - October 26th 2026
+
+#### User facing changes
+- Fixed a bug where missing thread create perms resulted in a weird suggestion state
+- Cap suggestion notes and resolution messages to the same length as suggestion content
+- If a suggestion is too long, direct users to view the suggestion in the web viewer
+- Added the ability to view suggestions on our dashboard
+- Suggestion footers now have a link to view in the dashboard
+
+#### Technical changes
+- Updated dependencies
+- Fix telemetry attribute
+- Cache avatar lookup misses to reduce ratelimit hits
+- Support faster test suite runs
+  - It was like 4x faster on my machine and used the entire CPU
+
 ### Version 4.5 - October 10th 2026
 
 #### User facing changes
