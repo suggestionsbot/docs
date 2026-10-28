@@ -8,6 +8,14 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 ## Version 4 Changelog
 
+### Version 4.7 - Unreleased
+
+#### User facing changes
+
+
+#### Technical changes
+- Updated dependencies
+
 ### Version 4.6 - October 26th 2026
 
 #### User facing changes
