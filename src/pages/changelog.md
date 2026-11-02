@@ -11,10 +11,11 @@ Review previous changelogs in regard to newly added bot features and when they w
 ### Version 4.7 - Unreleased
 
 #### User facing changes
-
+- Add sticky button support for suggestion buttons
 
 #### Technical changes
 - Updated dependencies
+- Disabled some tests to speed up the general case
 
 ### Version 4.6 - October 26th 2026
 
