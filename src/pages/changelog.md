@@ -16,6 +16,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 #### Technical changes
 - Updated dependencies
 - Disabled some tests to speed up the general case
+- Fix subscription handling in the backend
 
 ### Version 4.6 - October 26th 2026
 
