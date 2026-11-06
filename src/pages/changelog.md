@@ -12,6 +12,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 
 #### User facing changes
 - Add sticky button support for suggestion buttons
+- Resolution when a thread doesnt exist now doesnt error
 
 #### Technical changes
 - Updated dependencies
