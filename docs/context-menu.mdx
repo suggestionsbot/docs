@@ -18,8 +18,6 @@ On this page, we'll let you know what each command in the context menu does. The
 To invoke a message command via the context menu, simply right click or long press the suggestion message. If you go to the "Apps" option, you'll see the following commands:
 
 - [Resolve suggestion](#resolve-suggestion)
-- [View down voters](#view-down-voters)
-- [View up voters](#view-up-voters)
 - [View voters](#view-voters)
 
 You will need the `Send Messages` permission in the channel you're doing this in. Otherwise, the "Apps" sub-menu will not display.
@@ -39,36 +37,6 @@ The bot will throw an error if the suggestion does not exist on the message.
   }}
 />
 
-
-## View up voters
-
-This command will return a message displaying all the up voters on a suggestion.
-
-<SuggestionEmbedMessage
-  embed={<ViewVoters filter="upvoters" />}
-  message={{
-    command: {
-      name: 'View up voters'
-    },
-    ephemeral: true
-  }}
-  ephemeral
-/>
-
-## View down voters
-
-This command will return a message displaying all the down voters on a suggestion.
-
-<SuggestionEmbedMessage
-  embed={<ViewVoters filter="downvoters" />}
-  message={{
-    command: {
-      name: 'View down voters'
-    },
-    ephemeral: true
-  }}
-  ephemeral
-/>
 
 ## View voters
 
