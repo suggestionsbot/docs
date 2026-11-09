@@ -210,7 +210,7 @@ This command will allow the user to view the voters on a particular suggestion. 
 | Option          | Description                                | Values                                                     | Example                                                | Required |
 |-----------------|--------------------------------------------|------------------------------------------------------------|--------------------------------------------------------|----------|
 | `suggestion_id` | The suggestion you want to view voters for |                                                            | `/view voters suggestion_id:lrt97z1s`                  | **true** |
-| `filter`        | The voters to view for this suggestion     | - `All voters` <br /> - `Up voters` <br /> - `Down voters` | `/view voters suggestion_id:lrt97z1s filter:Up voters` | false    |
+| `filter`        | The voters to view for this suggestion     | - `All voters` <br /> - `Up voters` <br /> - `Down voters` <br /> - `Neutral voters` | `/view voters suggestion_id:lrt97z1s filter:Up voters` | false    |
 
 Down below, you'll find different examples of how suggestions are displayed.
 
@@ -254,6 +254,10 @@ Running `/view voters suggestion_id:lrt97z1s filter:Down voters` will display al
 />
 
 Running `/view voters suggestion_id:lrt97z1s filter:All voters` will display all users who have voted for the suggestion, both upvoters and downvoters.
+
+
+Running `/view voters suggestion_id:lrt97z1s filter:Neutral voters` will display all users who have voted neutrally for the suggestion.
+
 
 ### User Block Command
 
