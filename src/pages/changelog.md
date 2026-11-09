@@ -14,6 +14,8 @@ Review previous changelogs in regard to newly added bot features and when they w
 - Add sticky button support for suggestion buttons
 - Resolution when a thread doesnt exist now doesnt error
 - Removed view up and down voter message commands. It is now all in the view voters command
+- Added neutral votes to suggestions
+  - This can be turned off within the guild configuration
 
 #### Technical changes
 - Updated dependencies
