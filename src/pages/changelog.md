@@ -16,6 +16,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 - Removed view up and down voter message commands. It is now all in the view voters command
 - Added neutral votes to suggestions
   - This can be turned off within the guild configuration
+- Guilds with premium can now set custom emojis for suggestions (See [here](/docs/premium#custom-emojis))
 
 #### Technical changes
 - Updated dependencies

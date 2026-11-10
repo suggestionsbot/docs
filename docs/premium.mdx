@@ -61,6 +61,22 @@ When selecting `Edit Suggestion Message` a modal will pop up asking for both con
 
 If you want to reset this to nothing, leave the modal empty when submitting.
 
+### Custom Emojis
+
+Want custom emojis on suggestions? Let's do it.
+
+![](/img/bot/custom_emojis.png)
+
+There are four buttons present to configure custom emojis. A button for each vote type; Up, Neutral and Down; as well as a button that will reset the emojis back to the default.
+
+When setting an emoji, we support both generic Unicode emojis like 👀 and custom user uploaded emojis. When uploading Unicode emojis, either copy the emoji as is or provide the text version. The example text version for the eyes prior is `:eyes:`.
+
+To upload custom emojis, don't just copy and paste the emoji. First send it in Discord, but before you send it add a `\` to the front. For example, `\:eyes:`. Then Discord will show you some text instead of the emoji, this text is what you need to provide to the bot. An example can be seen in the screenshot below. The emoji is present, and then the text after is the emoji sent with a backslash. The latter is what should be used when setting emojis via the suggestions bot.
+
+![](/img/bot/custom_emoji_id.png)
+
+When setting emojis, the bot will also send a test message to the current channel using the emoji you upload to validate all is working as expected. If this fails, you will be unable to use the emoji. Please follow the instructions provided if this occurs, or reach out to our support channel for help.
+
 ### Custom Queued Suggestion Messages
 
 This feature lets you add a custom message to go alongside the queued suggestion when it is sent to a channel. Want to ping a role on new queued suggestions to let reviewers know something is ready for review? This is the feature for that.
