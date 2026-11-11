@@ -17,12 +17,15 @@ Review previous changelogs in regard to newly added bot features and when they w
 - Added neutral votes to suggestions
   - This can be turned off within the guild configuration
 - Guilds with premium can now set custom emojis for suggestions (See [here](/docs/premium#custom-emojis))
+- Updated all translations
+  - Machine translation was used for this, if things are wrong let us know the correct phrasing :)
 
 #### Technical changes
 - Updated dependencies
 - Disabled some tests to speed up the general case
 - Fix subscription handling in the backend
 - Changed tests to be less noisy
+- Reduced max length before truncating and showing dashboard viewer
 
 ### Version 4.6 - October 26th 2026
 
