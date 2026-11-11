@@ -26,6 +26,7 @@ Review previous changelogs in regard to newly added bot features and when they w
 - Fix subscription handling in the backend
 - Changed tests to be less noisy
 - Reduced max length before truncating and showing dashboard viewer
+- Fix some locales using the wrong entry
 
 ### Version 4.6 - October 26th 2026
 
