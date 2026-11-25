@@ -26,7 +26,7 @@ const config: Config = {
       async: true
     },
     {
-      src: '/js/plausible.js',
+      src: '/js/run.js',
       async: false
     }
   ],
