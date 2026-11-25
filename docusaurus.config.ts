@@ -22,7 +22,7 @@ const config: Config = {
   // Analytics
   scripts: [
     {
-      src: 'https://plausible.skelmis.co.nz/js/pa-FS5cRMCKwlCiT796Dll0l.js',
+      src: 'https://ruru.ouch.nz/r/vNi8nNd5m_8pO58y2OA4w.js',
       async: true
     },
     {
